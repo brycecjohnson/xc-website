@@ -1,8 +1,17 @@
 #!/bin/bash
 
 # AWS S3 Static Website Deployment Script
-# Make sure AWS CLI is installed and configured with your credentials
-
+# Deploys the Skyview XC website to S3 and invalidates CloudFront cache
+# 
+# Prerequisites:
+#   - AWS CLI installed and configured (aws configure)
+#   - IAM user with S3FullAccess and CloudFrontFullAccess
+#
+# Usage: 
+#   sh scripts/deploy-s3.sh
+#   or: npm run deploy-s3
+#
+# Environment variables (optional - defaults shown):
 BUCKET_NAME="${BUCKET_NAME:-skyview-xc-team}"
 REGION="${AWS_REGION:-us-east-1}"
 CLOUDFRONT_DISTRIBUTION_ID="${CLOUDFRONT_DISTRIBUTION_ID:-E31P5TNTOVU0J5}"

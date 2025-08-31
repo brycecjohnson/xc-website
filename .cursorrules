@@ -1,0 +1,49 @@
+# Skyview XC Team Website - AI Development Rules
+
+## Project Context
+You are working on a static website for a high school cross country team. The site is hosted on AWS S3 with CloudFront CDN and focuses on distributing weekly newsletters and training resources.
+
+## Code Style Rules
+
+### HTML
+- Use semantic HTML5 elements
+- Include descriptive comments for major sections
+- Keep all styles inline (no external CSS files)
+- Mobile-responsive design is required
+
+### File Structure
+- New newsletters go in `newsletters/` folder
+- Name format: `week#-newsletter.html`
+- New resources go in root directory
+- Always include back navigation to index.html
+
+### Color Scheme
+- Primary: #667eea
+- Secondary: #764ba2
+- Info boxes: #f8f9fa, #fff3cd, #d1ecf1
+- Success: #28a745
+- Warning: #ffc107
+- Danger: #dc3545
+
+## AWS Deployment
+- Test locally first: `python3 -m http.server 8000`
+- Deploy with: `npm run deploy-s3`
+- CloudFront cache takes 5-15 min to update
+
+## Content Guidelines
+- Maintain encouraging, supportive tone
+- Follow Jack Daniels training methodology
+- Provide both Varsity and JV workout options
+- Target audience: high school athletes and parents
+
+## When Adding Features
+1. Check CLAUDE.md for detailed instructions
+2. Test all links before deploying
+3. Ensure mobile responsiveness
+4. Keep AWS costs minimal (currently ~$0.10/month)
+
+## Important Files
+- CLAUDE.md - Detailed AI instructions
+- README.md - User documentation
+- scripts/deploy-s3.sh - Deployment script
+- .env.example - Environment variables template
