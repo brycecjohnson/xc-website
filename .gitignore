@@ -23,6 +23,9 @@ samconfig.toml
 .env
 .env.local
 
+# AWS installer
+AWSCLIV2.pkg
+
 # Logs
 *.log
 npm-debug.log*

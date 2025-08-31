@@ -3,10 +3,10 @@
 # AWS S3 Static Website Deployment Script
 # Make sure AWS CLI is installed and configured with your credentials
 
-BUCKET_NAME="skyview-xc-team"
-REGION="us-east-1"
-CLOUDFRONT_DISTRIBUTION_ID="E31P5TNTOVU0J5"
-CLOUDFRONT_DOMAIN="d9mvm5wuesb39.cloudfront.net"
+BUCKET_NAME="${BUCKET_NAME:-skyview-xc-team}"
+REGION="${AWS_REGION:-us-east-1}"
+CLOUDFRONT_DISTRIBUTION_ID="${CLOUDFRONT_DISTRIBUTION_ID:-E31P5TNTOVU0J5}"
+CLOUDFRONT_DOMAIN="${CLOUDFRONT_DOMAIN:-d9mvm5wuesb39.cloudfront.net}"
 
 echo "🚀 Deploying to AWS S3..."
 
