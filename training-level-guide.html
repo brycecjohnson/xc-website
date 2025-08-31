@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Training Level Selection Guide</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+            color: #333;
+        }
+        .header {
+            text-align: center;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+        }
+        h1 {
+            margin: 0;
+            font-size: 2em;
+        }
+        .subtitle {
+            margin-top: 10px;
+            font-size: 1.1em;
+            opacity: 0.95;
+        }
+        .decision-tree {
+            background-color: #f0f8ff;
+            border: 2px solid #4a90e2;
+            border-radius: 10px;
+            padding: 25px;
+            margin: 30px 0;
+        }
+        .decision-tree h2 {
+            color: #2c5aa0;
+            text-align: center;
+            margin-top: 0;
+        }
+        .question-box {
+            background-color: white;
+            border-left: 5px solid #4a90e2;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .question {
+            font-weight: bold;
+            color: #2c5aa0;
+            font-size: 1.1em;
+            margin-bottom: 10px;
+        }
+        .answer-yes {
+            color: #27ae60;
+            font-weight: bold;
+        }
+        .answer-no {
+            color: #e74c3c;
+            font-weight: bold;
+        }
+        .time-standards {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin: 30px 0;
+        }
+        .boys-section {
+            background: linear-gradient(135deg, #667eea 0%, #4a90e2 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .girls-section {
+            background: linear-gradient(135deg, #764ba2 0%, #f093fb 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .time-table {
+            background-color: rgba(255, 255, 255, 0.95);
+            color: #333;
+            border-radius: 8px;
+            padding: 15px;
+            margin-top: 15px;
+        }
+        .time-table h3 {
+            margin-top: 0;
+            color: #333;
+        }
+        .time-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 8px 0;
+            border-bottom: 1px solid #ddd;
+        }
+        .time-row:last-child {
+            border-bottom: none;
+        }
+        .level-label {
+            font-weight: bold;
+        }
+        .varsity-level {
+            color: #27ae60;
+        }
+        .jv-level {
+            color: #f39c12;
+        }
+        .developmental-level {
+            color: #95a5a6;
+        }
+        .guidelines-box {
+            background-color: #fff9e6;
+            border: 2px solid #f1c40f;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 30px 0;
+        }
+        .guidelines-box h2 {
+            color: #f39c12;
+            margin-top: 0;
+        }
+        .principle-card {
+            background-color: white;
+            border-left: 4px solid #3498db;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .principle-title {
+            font-weight: bold;
+            color: #2c5aa0;
+            margin-bottom: 8px;
+        }
+        .warning-box {
+            background-color: #ffe5e5;
+            border: 2px solid #e74c3c;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 30px 0;
+        }
+        .warning-box h3 {
+            color: #c0392b;
+            margin-top: 0;
+        }
+        .check-mark {
+            color: #27ae60;
+            font-size: 1.2em;
+        }
+        .x-mark {
+            color: #e74c3c;
+            font-size: 1.2em;
+        }
+        .final-note {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            margin-top: 30px;
+        }
+        @media (max-width: 600px) {
+            .time-standards {
+                grid-template-columns: 1fr;
+            }
+        }
+        @media print {
+            body {
+                font-size: 11pt;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>TRAINING LEVEL SELECTION GUIDE</h1>
+        <div class="subtitle">How to Choose Between Varsity and JV Workouts</div>
+        <div class="subtitle">Based on Jack Daniels' Running Formula</div>
+    </div>
+
+    <div class="decision-tree">
+        <h2>🎯 QUICK DECISION TREE</h2>
+        
+        <div class="question-box">
+            <div class="question">Question 1: Can you currently run 5-6 miles continuously at an easy conversational pace?</div>
+            <div><span class="answer-no">NO →</span> Follow JV workouts</div>
+            <div><span class="answer-yes">YES →</span> Continue to Question 2</div>
+        </div>
+
+        <div class="question-box">
+            <div class="question">Question 2: Check your most recent 5K time against the standards below. Are you in the Varsity range?</div>
+            <div><span class="answer-no">NO →</span> Follow JV workouts</div>
+            <div><span class="answer-yes">YES →</span> Continue to Question 3</div>
+        </div>
+
+        <div class="question-box">
+            <div class="question">Question 3: After a typical week of training, do you feel recovered and ready for the next week?</div>
+            <div><span class="answer-no">NO →</span> Follow JV workouts (build gradually)</div>
+            <div><span class="answer-yes">YES →</span> Continue to Question 4</div>
+        </div>
+
+        <div class="question-box">
+            <div class="question">Question 4: Can you complete tempo runs and interval workouts at the prescribed paces without excessive struggle?</div>
+            <div><span class="answer-no">NO →</span> Follow JV workouts (focus on proper pacing)</div>
+            <div><span class="answer-yes">YES →</span> Follow VARSITY workouts! 💪</div>
+        </div>
+    </div>
+
+    <div class="time-standards">
+        <div class="boys-section">
+            <h2>👦 BOYS 5K STANDARDS</h2>
+            <div class="time-table">
+                <h3>Time-Based Guidelines:</h3>
+                <div class="time-row">
+                    <span class="level-label varsity-level">Strong Varsity:</span>
+                    <span>Under 17:30</span>
+                </div>
+                <div class="time-row">
+                    <span class="level-label varsity-level">Varsity:</span>
+                    <span>17:30 - 19:30</span>
+                </div>
+                <div class="time-row">
+                    <span class="level-label jv-level">Varsity/JV Border:</span>
+                    <span>19:30 - 21:00</span>
+                </div>
+                <div class="time-row">
+                    <span class="level-label jv-level">JV:</span>
+                    <span>21:00 - 24:00</span>
+                </div>
+                <div class="time-row">
+                    <span class="level-label developmental-level">Developmental:</span>
+                    <span>Over 24:00</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="girls-section">
+            <h2>👧 GIRLS 5K STANDARDS</h2>
+            <div class="time-table">
+                <h3>Time-Based Guidelines:</h3>
+                <div class="time-row">
+                    <span class="level-label varsity-level">Strong Varsity:</span>
+                    <span>Under 20:30</span>
+                </div>
+                <div class="time-row">
+                    <span class="level-label varsity-level">Varsity:</span>
+                    <span>20:30 - 22:30</span>
+                </div>
+                <div class="time-row">
+                    <span class="level-label jv-level">Varsity/JV Border:</span>
+                    <span>22:30 - 24:00</span>
+                </div>
+                <div class="time-row">
+                    <span class="level-label jv-level">JV:</span>
+                    <span>24:00 - 27:00</span>
+                </div>
+                <div class="time-row">
+                    <span class="level-label developmental-level">Developmental:</span>
+                    <span>Over 27:00</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="guidelines-box">
+        <h2>📋 JACK DANIELS' KEY TRAINING PRINCIPLES</h2>
+        
+        <div class="principle-card">
+            <div class="principle-title">Principle #1: Train at Your Current Fitness Level</div>
+            <div>Your body adapts best when training matches your current ability, not your goal ability. Be honest about where you are today.</div>
+        </div>
+
+        <div class="principle-card">
+            <div class="principle-title">Principle #2: Consistency Beats Intensity</div>
+            <div>It's better to complete 100% of JV workouts than to struggle through 70% of varsity workouts. Missed or incomplete workouts don't build fitness.</div>
+        </div>
+
+        <div class="principle-card">
+            <div class="principle-title">Principle #3: The 2-3 Week Rule</div>
+            <div>Training adaptations take 2-3 weeks to manifest. If you've been handling JV workouts well for 3+ weeks, consider moving up.</div>
+        </div>
+
+        <div class="principle-card">
+            <div class="principle-title">Principle #4: Quality Over Quantity</div>
+            <div>Running the correct paces for shorter distances is better than running too fast/slow for longer distances. Respect the workout's purpose.</div>
+        </div>
+    </div>
+
+    <div class="warning-box">
+        <h3>⚠️ RED FLAGS - Switch to JV Workouts If You Experience:</h3>
+        <ul>
+            <li><span class="x-mark">✗</span> Extreme fatigue lasting more than 24 hours after workouts</li>
+            <li><span class="x-mark">✗</span> Unable to hit prescribed paces in workouts</li>
+            <li><span class="x-mark">✗</span> Declining race performances despite hard training</li>
+            <li><span class="x-mark">✗</span> Persistent soreness or nagging injuries</li>
+            <li><span class="x-mark">✗</span> Dreading practice or losing motivation</li>
+            <li><span class="x-mark">✗</span> Sleep problems or getting sick frequently</li>
+        </ul>
+    </div>
+
+    <div class="guidelines-box">
+        <h2>✅ GREEN FLAGS - Ready for Varsity Workouts:</h2>
+        <ul>
+            <li><span class="check-mark">✓</span> Completing current workouts with energy left over</li>
+            <li><span class="check-mark">✓</span> Recovering well between hard days</li>
+            <li><span class="check-mark">✓</span> Hitting all prescribed paces comfortably</li>
+            <li><span class="check-mark">✓</span> Excited and motivated for practice</li>
+            <li><span class="check-mark">✓</span> Sleeping well and feeling healthy</li>
+            <li><span class="check-mark">✓</span> Recent race times in varsity range</li>
+        </ul>
+    </div>
+
+    <div class="guidelines-box">
+        <h2>🔄 BORDERLINE ATHLETES (Varsity/JV Border Times)</h2>
+        <p><strong>If you're in the border zone, consider these factors:</strong></p>
+        <ul>
+            <li><strong>Training Age:</strong> How many seasons have you been running?
+                <ul>
+                    <li>First year? → Lean toward JV workouts</li>
+                    <li>2+ years? → Consider varsity if recovering well</li>
+                </ul>
+            </li>
+            <li><strong>Summer Base:</strong> Did you run consistently over summer?
+                <ul>
+                    <li>Yes (25+ miles/week) → Try varsity workouts</li>
+                    <li>No or minimal → Start with JV workouts</li>
+                </ul>
+            </li>
+            <li><strong>Growth Status:</strong> Are you still growing rapidly?
+                <ul>
+                    <li>Yes → JV workouts (your body needs energy for growth)</li>
+                    <li>No → Varsity workouts if other factors align</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div class="principle-card">
+        <div class="principle-title">🎯 THE TWO-WEEK TEST</div>
+        <div>
+            <p><strong>Still unsure? Try this approach:</strong></p>
+            <ol>
+                <li>Start with JV workouts for 2 weeks</li>
+                <li>If you feel strong and recovered after every workout, move to varsity</li>
+                <li>If varsity feels too hard after 2 weeks, return to JV without shame</li>
+                <li>Re-evaluate every 3-4 weeks as your fitness improves</li>
+            </ol>
+            <p style="margin-top: 15px;"><em>Remember: You can always move up OR down based on how you feel. This isn't a permanent decision!</em></p>
+        </div>
+    </div>
+
+    <div class="final-note">
+        <h2>💪 REMEMBER THE GOAL</h2>
+        <p style="font-size: 1.1em;">The purpose of training is to improve and stay healthy, not to survive the hardest possible workouts.</p>
+        <p><strong>Choose the level that allows you to:</strong></p>
+        <p>✓ Complete every workout successfully<br>
+        ✓ Feel motivated and energized<br>
+        ✓ Race your best when it matters<br>
+        ✓ Enjoy the journey!</p>
+        <p style="margin-top: 20px; font-size: 1.2em;"><strong>"Train smarter, not just harder!"</strong></p>
+        <p style="margin-top: 10px;">- Based on Jack Daniels' Running Formula -</p>
+    </div>
+
+</body>
+</html>

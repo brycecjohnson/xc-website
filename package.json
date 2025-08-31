@@ -1,0 +1,13 @@
+{
+  "name": "skyview-xc-team",
+  "version": "1.0.0",
+  "description": "Skyview Academy Cross Country Team Website",
+  "scripts": {
+    "deploy-s3": "sh scripts/deploy-s3.sh",
+    "serve": "python3 -m http.server 8000",
+    "build": "sh scripts/build.sh"
+  },
+  "keywords": ["cross-country", "skyview", "newsletter"],
+  "author": "",
+  "license": "MIT"
+}
