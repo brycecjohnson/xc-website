@@ -45,10 +45,13 @@ aws s3api head-bucket --bucket "$BUCKET_NAME" 2>/dev/null || {
 # Sync newsletters folder
 aws s3 sync newsletters/ "s3://$BUCKET_NAME/newsletters/" --delete
 
-# Copy index.html if it exists
-if [ -f "index.html" ]; then
-    aws s3 cp index.html "s3://$BUCKET_NAME/index.html"
-fi
+# Upload all HTML files in root directory
+for file in *.html; do
+    if [ -f "$file" ]; then
+        echo "Uploading $file..."
+        aws s3 cp "$file" "s3://$BUCKET_NAME/$file"
+    fi
+done
 
 # Invalidate CloudFront cache to show new content immediately
 echo "🔄 Invalidating CloudFront cache..."
