@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Newsletter Archive - Skyview XC Team</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .header {
+            text-align: center;
+            color: white;
+            padding: 40px 20px;
+        }
+        h1 {
+            margin: 0;
+            font-size: 2.5em;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+        .subtitle {
+            margin-top: 10px;
+            font-size: 1.2em;
+            opacity: 0.95;
+        }
+        .back-link {
+            display: inline-block;
+            margin: 20px 0;
+            padding: 10px 20px;
+            background: white;
+            color: #667eea;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: transform 0.2s;
+        }
+        .back-link:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        .archive-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+        .newsletter-card {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.2s, box-shadow 0.2s;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+        .newsletter-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+        }
+        .week-number {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            display: inline-block;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .newsletter-date {
+            font-size: 1.1em;
+            color: #333;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+        .newsletter-highlights {
+            color: #666;
+            font-size: 0.95em;
+            line-height: 1.5;
+        }
+        .newsletter-highlights ul {
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+        .newsletter-highlights li {
+            margin: 5px 0;
+        }
+        .current-badge {
+            background-color: #28a745;
+            color: white;
+            padding: 3px 8px;
+            border-radius: 3px;
+            font-size: 0.8em;
+            margin-left: 10px;
+            font-weight: normal;
+        }
+        .info-box {
+            background-color: rgba(255, 255, 255, 0.95);
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            margin: 30px 0;
+            border-radius: 5px;
+        }
+        .info-box h3 {
+            margin-top: 0;
+            color: #856404;
+        }
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2em;
+            }
+            .archive-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Newsletter Archive</h1>
+            <div class="subtitle">Skyview Academy Cross Country Team</div>
+            <a href="index.html" class="back-link">← Back to Home</a>
+        </div>
+
+        <div class="info-box">
+            <h3>About Our Newsletters</h3>
+            <p>Weekly newsletters are sent out every Sunday evening during the cross country season. Each newsletter includes the upcoming week's training schedule, important announcements, coaching tips, and motivational content to help our athletes perform their best.</p>
+        </div>
+
+        <div class="archive-grid">
+            <!-- Week 5 Newsletter (Current) -->
+            <a href="newsletters/week5-newsletter.html" class="newsletter-card">
+                <span class="week-number">Week 5 <span class="current-badge">CURRENT</span></span>
+                <div class="newsletter-date">September 8-14, 2025</div>
+                <div class="newsletter-highlights">
+                    <strong>Race Week - Liberty Bell 5K</strong>
+                    <ul>
+                        <li>Liberty Bell 5K at Heritage High School</li>
+                        <li>VO₂ max intervals workout</li>
+                        <li>Pre-race nutrition strategy</li>
+                        <li>Final quality workouts before race</li>
+                    </ul>
+                </div>
+            </a>
+
+            <!-- Week 4 Newsletter -->
+            <a href="newsletters/week4-newsletter.html" class="newsletter-card">
+                <span class="week-number">Week 4</span>
+                <div class="newsletter-date">September 1-7, 2025</div>
+                <div class="newsletter-highlights">
+                    <strong>Phase II Training Begins</strong>
+                    <ul>
+                        <li>Introduction to speed work (400m repeats)</li>
+                        <li>20-minute threshold run</li>
+                        <li>Labor Day training guidelines</li>
+                        <li>Post-workout recovery tips</li>
+                    </ul>
+                </div>
+            </a>
+
+            <!-- Week 3 Newsletter (Placeholder) -->
+            <div class="newsletter-card" style="opacity: 0.6; cursor: not-allowed;">
+                <span class="week-number">Week 3</span>
+                <div class="newsletter-date">August 25-31, 2025</div>
+                <div class="newsletter-highlights">
+                    <strong>Coming Soon</strong>
+                    <ul>
+                        <li>Base building continues</li>
+                        <li>First time trial results</li>
+                        <li>Hydration strategies</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Week 2 Newsletter (Placeholder) -->
+            <div class="newsletter-card" style="opacity: 0.6; cursor: not-allowed;">
+                <span class="week-number">Week 2</span>
+                <div class="newsletter-date">August 18-24, 2025</div>
+                <div class="newsletter-highlights">
+                    <strong>Coming Soon</strong>
+                    <ul>
+                        <li>Aerobic development focus</li>
+                        <li>Introduction to tempo runs</li>
+                        <li>Team building activities</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Week 1 Newsletter (Placeholder) -->
+            <div class="newsletter-card" style="opacity: 0.6; cursor: not-allowed;">
+                <span class="week-number">Week 1</span>
+                <div class="newsletter-date">August 11-17, 2025</div>
+                <div class="newsletter-highlights">
+                    <strong>Coming Soon</strong>
+                    <ul>
+                        <li>Season kickoff</li>
+                        <li>Training philosophy overview</li>
+                        <li>Team goals and expectations</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="info-box" style="margin-top: 40px;">
+            <h3>Looking for Something Specific?</h3>
+            <p>If you're looking for training guides, pace calculators, or other resources, visit our <a href="index.html" style="color: #667eea; font-weight: bold;">main page</a>. For real-time team communication and updates, check <a href="https://go.teamsnap.com" style="color: #667eea; font-weight: bold;">TeamSnap</a>.</p>
+        </div>
+    </div>
+</body>
+</html>

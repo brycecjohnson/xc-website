@@ -66,6 +66,7 @@ skyview-xc-team/
    - Maintain consistent styling (gradients, cards, colors)
    - Add to newsletters/ folder with naming: `week#-newsletter.html`
    - Update index.html with new link
+   - **CRITICAL**: Never make up specific details about races, team events, bus times, dinner locations, or any logistics. Always keep announcements generic and refer readers to TeamSnap for actual details
 
 2. **New Quick Link/Resource**:
    - Create standalone HTML file in root
