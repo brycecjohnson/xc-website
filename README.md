@@ -25,6 +25,7 @@ Designed and implemented a team communication portal to streamline information d
 ### AI-Augmented Development Excellence
 - **Advanced Tool Proficiency** - Mastered Claude Code to accelerate delivery timeline by 75% while maintaining code quality
 - **AI-Native Architecture** - Pioneered documentation patterns (CLAUDE.md, .cursorrules) enabling 10x faster onboarding for future developers
+- **Intelligent Agent Design** - Created specialized AI personas (COACH_KELLY_AGENT.md) for domain-specific content generation with consistent voice and expertise
 - **Prompt Engineering Expertise** - Effectively directed AI assistance for complex architectural decisions and optimization strategies
 - **Productivity Multiplication** - Achieved senior-level output through strategic AI collaboration, demonstrating adaptability to emerging technologies
 - **Future-Ready Development** - Built self-documenting codebase that leverages AI for continuous improvement and maintenance efficiency
@@ -120,6 +121,30 @@ This project demonstrates:
 - **Competitive Positioning** - Demonstrated mastery of emerging technologies that will define the next decade of software development
 - **ROI Maximization** - Leveraged AI to deliver enterprise-quality solutions at startup speeds
 
+## 🤖 AI Agent System Architecture
+
+### Intelligent Content Generation Framework
+Pioneered a sophisticated AI agent system that demonstrates advanced prompt engineering and domain-specific AI orchestration:
+
+- **COACH_KELLY_AGENT.md** - A specialized AI persona with:
+  - Domain expertise in marathon running and Jack Daniels training methodology
+  - Consistent voice and personality across all content generation
+  - Built-in guardrails preventing hallucination of specific event details
+  - Personal experience integration (Boston Marathon qualifier perspective)
+
+- **NEWSLETTER_AGENT.md** - Technical content generation specifications:
+  - Structured template system for consistency
+  - Phase-aware training progressions
+  - Automatic workout scaling for different skill levels
+  - Safety-first approach to prevent fabrication of logistics
+
+### Strategic AI Engineering Benefits
+- **Scalability** - Single agent can generate unlimited consistent content
+- **Quality Control** - Built-in validation rules ensure accuracy
+- **Domain Transfer** - Agent architecture easily adaptable to other sports/domains
+- **Maintenance Efficiency** - Updates to agent persona cascade to all future content
+- **Team Enablement** - Non-technical users can leverage agents through simple prompts
+
 ## 📈 Future Roadmap
 
 Planned enhancements showcasing continued technical growth:
@@ -128,11 +153,13 @@ Planned enhancements showcasing continued technical growth:
 - Automated visual regression testing
 - Load testing suite for capacity planning
 - API development for mobile app integration
+- Enhanced AI agents with seasonal training plan generation
 
 ## 🤝 Advanced Collaboration & Toolchain Mastery
 
 - **AI Pair Programming Excellence** - Achieved 4x productivity gains through expert-level Claude Code utilization
-- **Prompt Engineering** - Crafted precise technical specifications that maximize AI effectiveness
+- **Intelligent Agent Architecture** - Developed reusable AI personas (Coach Kelly Johnson) that maintain consistent domain expertise and voice across content generation
+- **Prompt Engineering** - Crafted precise technical specifications that maximize AI effectiveness while preventing hallucination through strict guardrails
 - **Version Control** - Git workflow optimized for AI-assisted development patterns
 - **Cloud Services** - AWS ecosystem expertise with infrastructure-as-code approach
 - **Living Documentation** - Self-updating documentation strategy that scales with AI capabilities
