@@ -112,15 +112,26 @@ skyview-xc-team/
 
 ## Common Tasks
 
-### Add Week 5 Newsletter
+### Add New Weekly Newsletter
 ```bash
 # 1. Create new newsletter file
-cp newsletters/week4-newsletter.html newsletters/week5-newsletter.html
-# 2. Edit content in week5-newsletter.html
-# 3. Add link to index.html
-# 4. Deploy
+cp newsletters/previous-week-newsletter.html newsletters/week#-newsletter.html
+# 2. Edit content in week#-newsletter.html
+# 3. Update index.html: 
+#    - Add new newsletter as "Current Week" 
+#    - REMOVE previous week from index.html (it goes to archive)
+# 4. Update newsletter-archive.html:
+#    - Add the previous week to the archive
+#    - Remove "CURRENT" badge from any archived newsletters
+# 5. Deploy
 npm run deploy-s3
 ```
+
+**IMPORTANT Newsletter Display Rules:**
+- Only the CURRENT week's newsletter should appear on index.html
+- All past newsletters should be in newsletter-archive.html
+- The archive link should always be visible on index.html
+- Never display multiple week newsletters on the main page
 
 ### Update Race Results
 ```bash
