@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2025 XC Season Training Plan</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+            color: #333;
+        }
+        .header {
+            text-align: center;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+        }
+        h1 {
+            margin: 0;
+            font-size: 2em;
+        }
+        .subtitle {
+            margin-top: 10px;
+            font-size: 1.1em;
+            opacity: 0.95;
+        }
+        .info-box {
+            background-color: #f8f9fa;
+            border-left: 4px solid #667eea;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+        .workout-key {
+            background-color: #fff3cd;
+            border-left: 4px solid #ffc107;
+        }
+        .mileage-guide {
+            background-color: #d1ecf1;
+            border-left: 4px solid #17a2b8;
+        }
+        .phase-header {
+            background-color: #667eea;
+            color: white;
+            padding: 12px;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+        .week-header {
+            background-color: #f8f9fa;
+            padding: 10px;
+            margin-top: 25px;
+            margin-bottom: 15px;
+            border-left: 4px solid #667eea;
+            font-weight: bold;
+            font-size: 1.05em;
+        }
+        .race-week {
+            background-color: #ffe5e5;
+            border-left-color: #dc3545;
+        }
+        .championship-week {
+            background-color: #ffe5ff;
+            border-left-color: #9b59b6;
+        }
+        .workout-day {
+            margin: 12px 0;
+            padding: 10px;
+            background-color: #ffffff;
+            border: 1px solid #e0e0e0;
+            border-radius: 5px;
+        }
+        .day-label {
+            font-weight: bold;
+            color: #667eea;
+            display: inline-block;
+            width: 120px;
+        }
+        .workout-type {
+            font-weight: bold;
+            color: #333;
+            display: inline-block;
+            width: 150px;
+        }
+        .workout-details {
+            color: #666;
+            margin-left: 10px;
+        }
+        .race-day {
+            background-color: #fff3cd;
+            border: 2px solid #ffc107;
+        }
+        .championship-day {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            font-weight: bold;
+        }
+        .championship-day .day-label,
+        .championship-day .workout-type,
+        .championship-day .workout-details {
+            color: white;
+        }
+        .notes-section {
+            background-color: #e7f3ff;
+            padding: 20px;
+            margin-top: 40px;
+            border-radius: 10px;
+            border: 1px solid #b3d7ff;
+        }
+        .notes-section h3 {
+            color: #0066cc;
+            margin-top: 0;
+        }
+        ul {
+            margin: 10px 0;
+        }
+        li {
+            margin: 5px 0;
+        }
+        @media print {
+            body {
+                font-size: 11pt;
+            }
+            .phase-header {
+                page-break-before: auto;
+            }
+        }
+        @media (max-width: 600px) {
+            .day-label, .workout-type {
+                display: block;
+                width: 100%;
+                margin-bottom: 5px;
+            }
+            .workout-details {
+                margin-left: 0;
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>2025 CROSS COUNTRY SEASON</h1>
+        <div class="subtitle">Complete Training Plan • August 29 - November 1</div>
+        <div class="subtitle">Based on Jack Daniels' Running Formula</div>
+    </div>
+
+    <div class="info-box workout-key">
+        <h3 style="margin-top: 0;">📋 WORKOUT KEY</h3>
+        <ul style="list-style-type: none; padding-left: 0;">
+            <li><strong>E</strong> = Easy pace + strides (conversational pace)</li>
+            <li><strong>T</strong> = Threshold/Tempo (comfortably hard, like a hard but controlled effort)</li>
+            <li><strong>I</strong> = Interval (VO₂max pace, approximately 5K race pace)</li>
+            <li><strong>R</strong> = Repetition (speed/economy work, faster than 5K pace)</li>
+            <li><strong>LR</strong> = Long Run (steady, comfortable effort)</li>
+            <li><strong>Strides</strong> = Short accelerations (80-100m) at a fast but relaxed pace</li>
+        </ul>
+    </div>
+
+    <div class="info-box mileage-guide">
+        <h3 style="margin-top: 0;">📊 WEEKLY MILEAGE GUIDELINES</h3>
+        <ul style="list-style-type: none; padding-left: 0;">
+            <li><strong>Varsity Boys:</strong> 30-45 miles per week</li>
+            <li><strong>Varsity Girls:</strong> 25-35 miles per week</li>
+            <li><strong>JV Boys:</strong> 20-30 miles per week</li>
+            <li><strong>JV Girls:</strong> 15-25 miles per week</li>
+        </ul>
+        <p style="margin: 10px 0 0 0; font-style: italic;">*All athletes follow the same workout structure but adjust volume and pace based on their fitness level</p>
+    </div>
+
+    <!-- PHASE II -->
+    <div class="phase-header">
+        PHASE II: EARLY QUALITY (August 29 - September 13)
+        <div style="font-weight: normal; font-size: 0.9em; margin-top: 5px;">Focus: Introduce speed work, maintain aerobic base, prepare for racing</div>
+    </div>
+
+    <div class="week-header race-week">WEEK 3: August 25 - August 31 (OPENER RACE)</div>
+
+    <div class="workout-day">
+        <span class="day-label">MON 8/25:</span>
+        <span class="workout-type">Easy + Strides</span>
+        <span class="workout-details">V: 5mi, JV: 3-4mi + 6x100m strides</span>
+    </div>
+
+    <div class="workout-day">
+        <span class="day-label">TUE 8/26:</span>
+        <span class="workout-type">Threshold</span>
+        <span class="workout-details">2mi warm-up, 15min tempo, 1mi cool-down</span>
+    </div>
+
+    <div class="workout-day">
+        <span class="day-label">WED 8/27:</span>
+        <span class="workout-type">Easy Recovery</span>
+        <span class="workout-details">V: 4mi, JV: 3mi at easy pace</span>
+    </div>
+
+    <div class="workout-day">
+        <span class="day-label">THU 8/28:</span>
+        <span class="workout-type">Pre-Race</span>
+        <span class="workout-details">20-30min easy + 4x100m strides</span>
+    </div>
+
+    <div class="workout-day race-day">
+        <span class="day-label">FRI 8/29:</span>
+        <span class="workout-type">🏃 RACE</span>
+        <span class="workout-details">SEASON OPENER 5K</span>
+    </div>
+
+    <div class="workout-day">
+        <span class="day-label">SAT 8/30:</span>
+        <span class="workout-type">Easy Recovery</span>
+        <span class="workout-details">V: 5-6mi, JV: 4mi easy (post-race recovery)</span>
+    </div>
+
+    <div class="workout-day">
+        <span class="day-label">SUN 8/31:</span>
+        <span class="workout-type">OFF</span>
+        <span class="workout-details">Complete rest - No running</span>
+    </div>
+
+    <div class="week-header">WEEK 4: September 1 - September 7</div>
+
+    <div class="workout-day">
+        <span class="day-label">MON 9/1:</span>
+        <span class="workout-type">Easy Recovery</span>
+        <span class="workout-details">V: 5mi, JV: 3-4mi at easy pace (Labor Day)</span>
+    </div>
+
+    <div class="workout-day">
+        <span class="day-label">TUE 9/2:</span>
+        <span class="workout-type">Speed Work (R)</span>
+        <span class="workout-details">2mi warm-up, 8x400m fast with 2min rest, 2mi cool-down</span>
+    </div>
+
+    <div class="workout-day">
+        <span class="day-label">WED 9/3:</span>
+        <span class="workout-type">Easy + Strides</span>
+        <span class="workout-details">V: 5mi, JV: 3-4mi + 4x100m strides</span>
+    </div>
+
+    <div class="workout-day">
+        <span class="day-label">THU 9/4:</span>
+        <span class="workout-type">Threshold Run</span>
+        <span class="workout-details">2mi warm-up, 20min tempo run, 1mi cool-down</span>
+    </div>
+
+    <div class="workout-day">
+        <span class="day-label">FRI 9/5:</span>
+        <span class="workout-type">Easy Recovery</span>
+        <span class="workout-details">V: 4mi, JV: 2-3mi at easy pace</span>
+    </div>
+
+    <div class="workout-day">
+        <span class="day-label">SAT 9/6:</span>
+        <span class="workout-type">Long Run</span>
+        <span class="workout-details">V: 9-11mi, JV: 6-8mi at comfortable pace</span>
+    </div>
+
+    <div class="workout-day">
+        <span class="day-label">SUN 9/7:</span>
+        <span class="workout-type">OFF</span>
+        <span class="workout-details">Complete rest - No running</span>
+    </div>
+
+    <div class="week-header race-week">WEEK 5: September 8 - September 14 (LIBERTY BELL)</div>
+
+    <div class="workout-day">
+        <span class="day-label">MON 9/8:</span>
+        <span class="workout-type">Easy + Strides</span>
+        <span class="workout-details">V: 5-6mi, JV: 3-4mi + 6x100m strides</span>
+    </div>
+
+    <div class="workout-day">
+        <span class="day-label">TUE 9/9:</span>
+        <span class="workout-type">Interval Work</span>
+        <span class="workout-details">2mi warm-up, 4x1000m at 5K pace with 3min rest, 2mi cool-down</span>
+    </div>
+
+    <div class="workout-day">
+        <span class="day-label">WED 9/10:</span>
+        <span class="workout-type">Easy Recovery</span>
+        <span class="workout-details">V: 5mi, JV: 3-4mi at easy pace</span>
+    </div>
+
+    <div class="workout-day">
+        <span class="day-label">THU 9/11:</span>
+        <span class="workout-type">Pre-Race</span>
+        <span class="workout-details">V: 4mi, JV: 3mi easy + 4x100m strides</span>
+    </div>
+
+    <div class="workout-day">
+        <span class="day-label">FRI 9/12:</span>
+        <span class="workout-type">Shakeout</span>
+        <span class="workout-details">20-30min easy + 4x100m strides</span>
+    </div>
+
+    <div class="workout-day race-day">
+        <span class="day-label">SAT 9/13:</span>
+        <span class="workout-type">🏃 RACE</span>
+        <span class="workout-details">LIBERTY BELL INVITATIONAL</span>
+    </div>
+
+    <div class="workout-day">
+        <span class="day-label">SUN 9/14:</span>
+        <span class="workout-type">OFF</span>
+        <span class="workout-details">Complete rest</span>
+    </div>
+
+    <!-- PHASE III -->
+    <div class="phase-header">
+        PHASE III: PEAK TRAINING (September 15 - October 4)
+        <div style="font-weight: normal; font-size: 0.9em; margin-top: 5px;">Focus: Maximum fitness, race-specific preparation, championship readiness</div>
+    </div>
+
+    <div class="week-header race-week">WEEK 6: September 15 - September 21 (HEAVY RACE WEEK)</div>
+
+    <div class="workout-day">
+        <span class="day-label">MON 9/15:</span>
+        <span class="workout-type">Easy Recovery</span>
+        <span class="workout-details">V: 4mi, JV: 2-3mi at easy pace</span>
+    </div>
+
+    <div class="workout-day race-day">
+        <span class="day-label">TUE 9/16:</span>
+        <span class="workout-type">🏃 RACE</span>
+        <span class="workout-details">Dual/Tri Meet (afternoon/evening)</span>
+    </div>
+
+    <div class="workout-day">
+        <span class="day-label">WED 9/17:</span>
+        <span class="workout-type">Easy Recovery</span>
+        <span class="workout-details">V: 4-5mi, JV: 3mi at easy pace</span>
+    </div>
+
+    <div class="workout-day">
+        <span class="day-label">THU 9/18:</span>
+        <span class="workout-type">Pre-Race</span>
+        <span class="workout-details">20min easy + 4x100m strides</span>
+    </div>
+
+    <div class="workout-day race-day">
+        <span class="day-label">FRI 9/19:</span>
+        <span class="workout-type">🏃 RACE</span>
+        <span class="workout-details">Invitational Meet</span>
+    </div>
+
+    <div class="workout-day race-day">
+        <span class="day-label">SAT 9/20:</span>
+        <span class="workout-type">🏃 RACE</span>
+        <span class="workout-details">Invitational Meet (back-to-back)</span>
+    </div>
+
+    <div class="workout-day">
+        <span class="day-label">SUN 9/21:</span>
+        <span class="workout-type">OFF</span>
+        <span class="workout-details">Complete rest after heavy race week</span>
+    </div>
+
+    <div class="week-header race-week">WEEK 7: September 22 - September 28 (DAVE SANDERS MEET)</div>
+
+    <div class="workout-day">
+        <span class="day-label">MON 9/22:</span>
+        <span class="workout-type">Easy Recovery</span>
+        <span class="workout-details">V: 5mi, JV: 3-4mi at easy pace</span>
+    </div>
+
+    <div class="workout-day">
+        <span class="day-label">TUE 9/23:</span>
+        <span class="workout-type">Speed Work (R)</span>
+        <span class="workout-details">2mi warm-up, 8x400m at 5K pace with 2min rest, 2mi cool-down</span>
+    </div>
+
+    <div class="workout-day">
+        <span class="day-label">WED 9/24:</span>
+        <span class="workout-type">Easy Recovery</span>
+        <span class="workout-details">V: 4mi, JV: 3mi at easy pace</span>
+    </div>
+
+    <div class="workout-day">
+        <span class="day-label">THU 9/25:</span>
+        <span class="workout-type">Pre-Race Shakeout</span>
+        <span class="workout-details">3mi easy + 4x100m strides</span>
+    </div>
+
+    <div class="workout-day race-day">
+        <span class="day-label">FRI 9/26:</span>
+        <span class="workout-type">🏃 RACE</span>
+        <span class="workout-details">DAVE SANDERS INVITATIONAL @ Clement Park</span>
+    </div>
+
+    <div class="workout-day">
+        <span class="day-label">SAT 9/27:</span>
+        <span class="workout-type">Long Run</span>
+        <span class="workout-details">V: 8-10mi, JV: 6-7mi at comfortable pace</span>
+    </div>
+
+    <div class="workout-day">
+        <span class="day-label">SUN 9/28:</span>
+        <span class="workout-type">OFF</span>
+        <span class="workout-details">Complete rest</span>
+    </div>
+
+    <div class="week-header championship-week">WEEK 8: Sept 29 - Oct 5 (LEAGUE CHAMPIONSHIP)</div>
+
+    <div class="workout-day">
+        <span class="day-label">MON 9/29:</span>
+        <span class="workout-type">Easy + Strides</span>
+        <span class="workout-details">V: 5mi, JV: 3-4mi + 6x100m strides</span>
+    </div>
+
+    <div class="workout-day">
+        <span class="day-label">TUE 9/30:</span>
+        <span class="workout-type">Interval Work</span>
+        <span class="workout-details">2mi warm-up, 5x800m at 5K pace with 2min rest, 2mi cool-down</span>
+    </div>
+
+    <div class="workout-day">
+        <span class="day-label">WED 10/1:</span>
+        <span class="workout-type">Easy Recovery</span>
+        <span class="workout-details">V: 4mi, JV: 2-3mi at easy pace</span>
+    </div>
+
+    <div class="workout-day">
+        <span class="day-label">THU 10/2:</span>
+        <span class="workout-type">Pre-Race</span>
+        <span class="workout-details">20-30min easy + 4x100m strides</span>
+    </div>
+
+    <div class="workout-day championship-day">
+        <span class="day-label">FRI 10/3:</span>
+        <span class="workout-type">🏆 CHAMPIONSHIP</span>
+        <span class="workout-details">LEAGUE CHAMPIONSHIP MEET</span>
+    </div>
+
+    <div class="workout-day">
+        <span class="day-label">SAT 10/4:</span>
+        <span class="workout-type">Recovery</span>
+        <span class="workout-details">Optional 20-30min easy or complete rest</span>
+    </div>
+
+    <div class="workout-day">
+        <span class="day-label">SUN 10/5:</span>
+        <span class="workout-type">OFF</span>
+        <span class="workout-details">Complete rest</span>
+    </div>
+
+    <!-- PHASE IV -->
+    <div class="phase-header">
+        PHASE IV: CHAMPIONSHIP PEAKING (October 6 - November 1)
+        <div style="font-weight: normal; font-size: 0.9em; margin-top: 5px;">Focus: Maintain fitness, sharpen speed, optimize for championships</div>
+    </div>
+
+    <div class="week-header">WEEK 9: October 6 - October 12 (RECOVERY)</div>
+
+    <div class="workout-day">
+        <span class="day-label">MON 10/6:</span>
+        <span class="workout-type">Easy Recovery</span>
+        <span class="workout-details">V: 5mi, JV: 3-4mi at easy pace</span>
+    </div>
+
+    <div class="workout-day">
+        <span class="day-label">TUE 10/7:</span>
+        <span class="workout-type">Speed Work</span>
+        <span class="workout-details">2mi warm-up, 6x300m fast with full rest, 2mi cool-down</span>
+    </div>
+
+    <div class="workout-day">
+        <span class="day-label">WED 10/8:</span>
+        <span class="workout-type">Easy + Strides</span>
+        <span class="workout-details">V: 5mi, JV: 3-4mi + 4x100m strides</span>
+    </div>
+
+    <div class="workout-day">
+        <span class="day-label">THU 10/9:</span>
+        <span class="workout-type">Threshold Run</span>
+        <span class="workout-details">2mi warm-up, 15min tempo, 1mi cool-down</span>
+    </div>
+
+    <div class="workout-day">
+        <span class="day-label">FRI 10/10:</span>
+        <span class="workout-type">Easy Recovery</span>
+        <span class="workout-details">V: 4mi, JV: 2-3mi at easy pace</span>
+    </div>
+
+    <div class="workout-day">
+        <span class="day-label">SAT 10/11:</span>
+        <span class="workout-type">Long Run</span>
+        <span class="workout-details">V: 8-10mi, JV: 5-7mi (reduced from peak)</span>
+    </div>
+
+    <div class="workout-day">
+        <span class="day-label">SUN 10/12:</span>
+        <span class="workout-type">OFF</span>
+        <span class="workout-details">Complete rest</span>
+    </div>
+
+    <div class="week-header">WEEK 10: October 13 - October 19</div>
+
+    <div class="workout-day">
+        <span class="day-label">MON 10/13:</span>
+        <span class="workout-type">Easy + Strides</span>
+        <span class="workout-details">V: 5mi, JV: 3-4mi + 6x100m strides</span>
+    </div>
+
+    <div class="workout-day">
+        <span class="day-label">TUE 10/14:</span>
+        <span class="workout-type">Interval Work</span>
+        <span class="workout-details">2mi warm-up, 3x1000m at 5K pace with 3min rest, 2mi cool-down</span>
+    </div>
+
+    <div class="workout-day">
+        <span class="day-label">WED 10/15:</span>
+        <span class="workout-type">Easy Recovery</span>
+        <span class="workout-details">V: 4-5mi, JV: 3mi at easy pace</span>
+    </div>
+
+    <div class="workout-day">
+        <span class="day-label">THU 10/16:</span>
+        <span class="workout-type">Fartlek</span>
+        <span class="workout-details">25-30min with 6x90sec surges at 5K pace</span>
+    </div>
+
+    <div class="workout-day">
+        <span class="day-label">FRI 10/17:</span>
+        <span class="workout-type">Easy Recovery</span>
+        <span class="workout-details">V: 4mi, JV: 2-3mi at easy pace</span>
+    </div>
+
+    <div class="workout-day">
+        <span class="day-label">SAT 10/18:</span>
+        <span class="workout-type">Time Trial/Long</span>
+        <span class="workout-details">3K time trial OR V: 7-9mi, JV: 5-6mi easy</span>
+    </div>
+
+    <div class="workout-day">
+        <span class="day-label">SUN 10/19:</span>
+        <span class="workout-type">OFF</span>
+        <span class="workout-details">Complete rest</span>
+    </div>
+
+    <div class="week-header championship-week">WEEK 11: October 20 - October 26 (REGIONALS)</div>
+
+    <div class="workout-day">
+        <span class="day-label">MON 10/20:</span>
+        <span class="workout-type">Easy + Strides</span>
+        <span class="workout-details">V: 4mi, JV: 3mi + 6x100m strides</span>
+    </div>
+
+    <div class="workout-day">
+        <span class="day-label">TUE 10/21:</span>
+        <span class="workout-type">Race Prep</span>
+        <span class="workout-details">2mi warm-up, 4x400m at 5K pace with 2min rest, 1mi cool-down</span>
+    </div>
+
+    <div class="workout-day">
+        <span class="day-label">WED 10/22:</span>
+        <span class="workout-type">Pre-Race</span>
+        <span class="workout-details">20min easy + 4x100m strides</span>
+    </div>
+
+    <div class="workout-day championship-day">
+        <span class="day-label">THU 10/23:</span>
+        <span class="workout-type">🏆 CHAMPIONSHIP</span>
+        <span class="workout-details">REGIONAL CHAMPIONSHIP MEET</span>
+    </div>
+
+    <div class="workout-day">
+        <span class="day-label">FRI 10/24:</span>
+        <span class="workout-type">Recovery</span>
+        <span class="workout-details">Complete rest or 20min easy</span>
+    </div>
+
+    <div class="workout-day">
+        <span class="day-label">SAT 10/25:</span>
+        <span class="workout-type">Easy Recovery</span>
+        <span class="workout-details">V: 4-5mi, JV: 3mi at easy pace</span>
+    </div>
+
+    <div class="workout-day">
+        <span class="day-label">SUN 10/26:</span>
+        <span class="workout-type">OFF</span>
+        <span class="workout-details">Complete rest</span>
+    </div>
+
+    <div class="week-header championship-week">WEEK 12: Oct 27 - Nov 2 (STATE - if qualified)</div>
+
+    <div class="workout-day">
+        <span class="day-label">MON 10/27:</span>
+        <span class="workout-type">Easy + Strides</span>
+        <span class="workout-details">V: 4mi, JV: 3mi + 4x100m strides</span>
+    </div>
+
+    <div class="workout-day">
+        <span class="day-label">TUE 10/28:</span>
+        <span class="workout-type">Final Tune-up</span>
+        <span class="workout-details">2mi warm-up, 3x600m at 5K pace with full rest, 1mi cool-down</span>
+    </div>
+
+    <div class="workout-day">
+        <span class="day-label">WED 10/29:</span>
+        <span class="workout-type">Easy Recovery</span>
+        <span class="workout-details">V: 3mi, JV: 2mi at easy pace</span>
+    </div>
+
+    <div class="workout-day">
+        <span class="day-label">THU 10/30:</span>
+        <span class="workout-type">Pre-Race</span>
+        <span class="workout-details">20min easy + 4x80m strides</span>
+    </div>
+
+    <div class="workout-day">
+        <span class="day-label">FRI 10/31:</span>
+        <span class="workout-type">Travel/Rest</span>
+        <span class="workout-details">15-20min shakeout if needed</span>
+    </div>
+
+    <div class="workout-day championship-day">
+        <span class="day-label">SAT 11/1:</span>
+        <span class="workout-type">🏆🏆 STATE</span>
+        <span class="workout-details">STATE CHAMPIONSHIP MEET</span>
+    </div>
+
+    <div class="workout-day">
+        <span class="day-label">SUN 11/2:</span>
+        <span class="workout-type">Season Celebration!</span>
+        <span class="workout-details">Rest and celebrate a great season!</span>
+    </div>
+
+    <div class="notes-section">
+        <h3>📌 IMPORTANT REMINDERS</h3>
+
+        <h4>Workout Execution:</h4>
+        <ul>
+            <li>Always complete a proper warm-up (10-15 min easy jog + dynamic stretches)</li>
+            <li>Cool-down after every workout (10 min easy jog + static stretching)</li>
+            <li>Adjust paces based on weather conditions (slow down 10-15 sec/mile on hot days)</li>
+            <li>Listen to your body - communicate any pain or excessive fatigue to coaches</li>
+        </ul>
+
+        <h4>Recovery & Nutrition:</h4>
+        <ul>
+            <li>Aim for 8+ hours of sleep every night</li>
+            <li>Hydrate throughout the day (minimum half your body weight in ounces)</li>
+            <li>Eat within 30 minutes after hard workouts and races</li>
+            <li>Ice baths or cold water immersion after hard efforts</li>
+        </ul>
+
+        <h4>Race Week Protocol:</h4>
+        <ul>
+            <li>Reduce training volume by 30-40%</li>
+            <li>Maintain intensity but reduce repetitions</li>
+            <li>Extra focus on sleep and nutrition</li>
+            <li>Visualize race strategy and stay positive</li>
+        </ul>
+
+        <h4>Communication:</h4>
+        <ul>
+            <li>Report any illness or injury immediately</li>
+            <li>Ask questions if workout instructions are unclear</li>
+            <li>Support your teammates - we win as a team!</li>
+        </ul>
+
+        <p style="margin-top: 20px; text-align: center; font-weight: bold; color: #667eea;">
+            "Champions are made in the off-season, revealed in the championship season!"<br>
+            GO TEAM! 💪🏃‍♂️🏃‍♀️
+        </p>
+    </div>
+
+</body>
+</html>

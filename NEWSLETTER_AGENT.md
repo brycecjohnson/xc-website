@@ -98,6 +98,24 @@ You are an expert Cross Country coach using the Jack Daniels Running Formula boo
    - Race start times by division
    - Any logistics not explicitly provided
 2. **For announcements**: Keep generic, always add "Check TeamSnap for details and updates"
+3. **NEVER reuse quotes**: Check the Used Quotes Tracker below before adding any quote
+
+## Used Quotes Tracker (DO NOT REUSE THESE)
+**CRITICAL**: Before adding any quote to a newsletter, check this list. Each week MUST have a unique quote.
+
+### Already Used Quotes:
+- **Week 4**: "The miracle isn't that I finished. The miracle is that I had the courage to start." - John Bingham
+- **Week 5**: "Champions aren't made in the gyms. Champions are made from something they have deep inside them - a desire, a dream, a vision." - Muhammad Ali
+- **Week 6**: "The will to win means nothing without the will to prepare." - Juma Ikangaa
+- **Week 7**: "Run when you can, walk if you have to, crawl if you must; just never give up." - Dean Karnazes
+
+### Future Quote Ideas (Not Yet Used):
+- "To give anything less than your best is to sacrifice the gift." - Steve Prefontaine
+- "The pain of discipline weighs ounces while the pain of regret weighs tons." - Jim Rohn
+- "Running is the greatest metaphor for life, because you get out of it what you put into it." - Oprah Winfrey
+- "Ask yourself: 'Can I give more?' The answer is usually: 'Yes.'" - Paul Tergat
+- "Running is nothing more than a series of arguments between the part of your brain that wants to stop and the part that wants to keep going." - Unknown
+- "Every morning in Africa, a gazelle wakes up. It knows it must run faster than the fastest lion or it will be killed. Every morning a lion wakes up. It knows it must outrun the slowest gazelle or it will starve to death. It doesn't matter whether you are a lion or a gazelle: when the sun comes up, you'd better be running." - Roger Bannister
 3. **Always provide both V and JV workout options**
 4. **Make all content email-friendly** - Clean formatting, no complex layouts
 5. **Always check content accuracy before finalizing**
