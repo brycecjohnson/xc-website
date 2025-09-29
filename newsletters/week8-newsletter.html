@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XC Newsletter Week 8</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            max-width: 650px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+            color: #333;
+        }
+        .header {
+            text-align: center;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 25px;
+        }
+        h1 {
+            margin: 0;
+            font-size: 1.8em;
+        }
+        h2 {
+            color: #667eea;
+            border-bottom: 2px solid #667eea;
+            padding-bottom: 5px;
+            margin-top: 25px;
+        }
+        .subtitle {
+            margin-top: 8px;
+            font-size: 1.2em;
+            opacity: 0.95;
+        }
+        .workout-table {
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        .workout-day {
+            display: flex;
+            padding: 10px 0;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        .workout-day:last-child {
+            border-bottom: none;
+        }
+        .day-label {
+            font-weight: bold;
+            color: #667eea;
+            width: 120px;
+        }
+        .workout-description {
+            flex: 1;
+        }
+        .workout-key-box {
+            background-color: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 12px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+        .workout-key-box h3 {
+            margin-top: 0;
+            color: #856404;
+        }
+        .announcements-box {
+            background-color: #d1ecf1;
+            border-left: 4px solid #17a2b8;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+        .coach-note {
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        .health-tip {
+            background-color: #d4edda;
+            border-left: 4px solid #28a745;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+        .quote-box {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 25px 0;
+            text-align: center;
+        }
+        .quote-text {
+            font-style: italic;
+            font-size: 1.1em;
+            margin-bottom: 10px;
+        }
+        .quote-author {
+            font-weight: bold;
+        }
+        ul {
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+        li {
+            margin: 5px 0;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 2px solid #e0e0e0;
+            color: #666;
+        }
+        @media (max-width: 600px) {
+            .workout-day {
+                flex-direction: column;
+            }
+            .day-label {
+                width: 100%;
+                margin-bottom: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>HIGH SCHOOL CROSS COUNTRY</h1>
+        <div class="subtitle">Week #8 Newsletter (Sept 29 - Oct 5, 2025)</div>
+    </div>
+
+    <h2>📅 WEEKLY WORKOUT SCHEDULE</h2>
+    <div class="workout-table">
+        <div class="workout-day">
+            <span class="day-label">Monday 9/29:</span>
+            <span class="workout-description">Easy + Strides - V: 5mi, JV: 3-4mi + 6x100m strides</span>
+        </div>
+        <div class="workout-day">
+            <span class="day-label">Tuesday 9/30:</span>
+            <span class="workout-description">Interval Work - 2mi warm-up, 5x800m @ 5K pace (2min rest), 2mi cool-down</span>
+        </div>
+        <div class="workout-day">
+            <span class="day-label">Wednesday 10/1:</span>
+            <span class="workout-description">Easy Recovery - V: 4mi, JV: 2-3mi at easy pace</span>
+        </div>
+        <div class="workout-day">
+            <span class="day-label">Thursday 10/2:</span>
+            <span class="workout-description">Pre-Race Shakeout - 20-30min easy + 4x100m strides</span>
+        </div>
+        <div class="workout-day">
+            <span class="day-label">Friday 10/3:</span>
+            <span class="workout-description">RACE DAY - Longs Peak Invite (League Meet) at Lake Estes Golf Course</span>
+        </div>
+        <div class="workout-day">
+            <span class="day-label">Saturday 10/4:</span>
+            <span class="workout-description">Recovery - Optional 20-30min easy or complete rest</span>
+        </div>
+        <div class="workout-day">
+            <span class="day-label">Sunday 10/5:</span>
+            <span class="workout-description">OFF - Complete rest day</span>
+        </div>
+    </div>
+
+    <div class="workout-key-box">
+        <h3>Workout Key:</h3>
+        <ul style="list-style-type: none; padding-left: 0;">
+            <li><strong>E</strong> = Easy + strides</li>
+            <li><strong>T</strong> = Threshold (tempo/cruise intervals)</li>
+            <li><strong>I</strong> = Interval (VO₂ max reps)</li>
+            <li><strong>R</strong> = Repetition (speed/economy)</li>
+            <li><strong>LR</strong> = Long Run</li>
+            <li><strong>RACE</strong> = 5K XC meet</li>
+        </ul>
+    </div>
+
+    <h2>📢 IMPORTANT ANNOUNCEMENTS</h2>
+    <div class="announcements-box">
+        <ul>
+            <li><strong>Longs Peak Invite (League Meet) - Friday, October 3rd</strong>
+                <ul style="margin-top: 5px;">
+                    <li>Location: Lake Estes 9-Hole Golf Course</li>
+                    <li>690 Big Thompson Ave, Estes Park, CO 80517</li>
+                    <li>Dismissal from class: 12:15 PM</li>
+                    <li>Bus departure: 12:30 PM (be dressed in uniforms at bus outside cafetorium)</li>
+                    <li>Girls Race: 4:00 PM</li>
+                    <li>Boys Race: 4:45 PM</li>
+                    <li>Expected return to SVA: ~8:00 PM</li>
+                </ul>
+            </li>
+            <li><strong>Important Logistics:</strong>
+                <ul style="margin-top: 5px;">
+                    <li>Pack lunch to eat on the bus</li>
+                    <li>Bring dinner/snacks OR money for fast food stop on return trip</li>
+                    <li>Course: Two-loop 5K on grass with dirt sections and cement bridges</li>
+                    <li>Start: 2nd hole fairway | Finish: Next to 1st green</li>
+                </ul>
+            </li>
+            <li><strong>Spectator Information:</strong>
+                <ul style="margin-top: 5px;">
+                    <li>Parking: Estes Park Public Parking Garage on US36</li>
+                    <li>Enter course through main entrance on US 34</li>
+                    <li>Stay off greens and out of private property</li>
+                    <li>⚠️ Watch for elk - they are dangerous!</li>
+                    <li>Dogs must be leashed with waste bags</li>
+                </ul>
+            </li>
+            <li><strong>Last Week's Results:</strong> Dave Sanders Invitational results available at <a href="https://runsignup.com/Race/Results/192896#resultSetId-588815;perpage:100" target="_blank" style="color: #17a2b8;">RunSignUp</a></li>
+        </ul>
+    </div>
+
+    <h2>💬 A NOTE FROM YOUR COACHES</h2>
+    <div class="coach-note">
+        <p>Hawks, we're heading into another important league meet this Friday at Estes Park! The Longs Peak Invite is a great opportunity to test ourselves on a challenging course and continue building momentum for the championship meets ahead.</p>
+
+        <p>Tuesday's interval workout is designed to maintain your race sharpness. Hit your 800s at goal 5K pace - no faster! This workout should feel controlled and smooth. We're in the peak phase of training, so these intervals are about maintaining speed, not building it. Wednesday's recovery run is crucial - keep it truly easy. Thursday's shakeout with strides will have you ready to race.</p>
+
+        <p>The Estes Park course is beautiful but challenging. The two-loop format means you'll know exactly what's coming on lap two. Use lap one to establish position and rhythm, then attack on lap two when others are fading. The altitude (7,500 feet) will be a factor - start conservatively and build into your race.</p>
+
+        <p>Remember our season-long focus on the Jack Daniels methodology - you've built your aerobic base (E runs), raised your lactate threshold (T workouts), improved your VO2 max (I sessions), and sharpened your speed (R work). Trust your training! You're ready to run your best race of the season. Let's show everyone what months of smart, consistent training can produce!</p>
+    </div>
+
+    <h2>🏃 HEALTH TIP OF THE WEEK</h2>
+    <div class="health-tip">
+        <h3 style="margin-top: 0;">Racing at Altitude</h3>
+        <p>The Estes Park course sits at 7,500 feet elevation - significantly higher than our normal training grounds. This week's preparation focuses on being ready for the altitude challenge:</p>
+        <p><strong>Sleep:</strong> Aim for 8+ hours Wednesday and Thursday nights. Poor sleep two nights before a race impacts performance more than the night before.</p>
+        <p><strong>Hydration:</strong> Start hydrating NOW. Drink water consistently throughout the week, not just Thursday. Add a pinch of salt to your water bottles for better absorption.</p>
+        <p><strong>Nutrition:</strong> Wednesday and Thursday, focus on quality carbs (pasta, rice, oatmeal) but don't overdo it. Eat familiar foods - no experiments! Friday's pre-race meal should be 3-4 hours before (eat lunch early on the bus).</p>
+        <p><strong>Mental prep:</strong> Visualize the two-loop course and your pacing strategy. Remember that everyone will feel the altitude - stay calm when breathing feels harder than usual. Focus on rhythm and relaxation!</p>
+    </div>
+
+    <div class="quote-box">
+        <div class="quote-text">"Champions aren't made in the gyms. Champions are made from something they have deep inside them - a desire, a dream, a vision."</div>
+        <div class="quote-author">- Muhammad Ali</div>
+        <p style="margin-top: 15px; font-size: 0.95em; font-style: normal;">You've put in the work all season long. Now it's time to let that champion inside you shine. Trust your training, trust your teammates, and run with the heart of a Hawk!</p>
+    </div>
+
+    <div class="footer">
+        <p><strong>GO HAWKS!</strong></p>
+        <p style="font-size: 0.9em;">Questions? Contact your coaches at practice or via TeamSnap.</p>
+    </div>
+
+</body>
+</html>
