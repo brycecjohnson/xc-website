@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XC Newsletter Week 9</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            max-width: 650px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+            color: #333;
+        }
+        .header {
+            text-align: center;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 25px;
+        }
+        h1 {
+            margin: 0;
+            font-size: 1.8em;
+        }
+        h2 {
+            color: #667eea;
+            border-bottom: 2px solid #667eea;
+            padding-bottom: 5px;
+            margin-top: 25px;
+        }
+        .subtitle {
+            margin-top: 8px;
+            font-size: 1.2em;
+            opacity: 0.95;
+        }
+        .workout-table {
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        .workout-day {
+            display: flex;
+            padding: 10px 0;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        .workout-day:last-child {
+            border-bottom: none;
+        }
+        .day-label {
+            font-weight: bold;
+            color: #667eea;
+            width: 120px;
+        }
+        .workout-content {
+            flex: 1;
+        }
+        .workout-content strong {
+            color: #667eea;
+            display: block;
+            margin-bottom: 5px;
+        }
+        .workout-key-box {
+            background-color: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 12px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+        .workout-key-box h3 {
+            margin-top: 0;
+            color: #856404;
+        }
+        .announcements-box {
+            background-color: #d1ecf1;
+            border-left: 4px solid #17a2b8;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+        .coach-note {
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        .health-tip {
+            background-color: #d4edda;
+            border-left: 4px solid #28a745;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+        .quote-box {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 25px 0;
+            text-align: center;
+        }
+        .quote-text {
+            font-style: italic;
+            font-size: 1.1em;
+            margin-bottom: 10px;
+        }
+        .quote-author {
+            font-weight: bold;
+        }
+        ul {
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+        li {
+            margin: 5px 0;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 2px solid #e0e0e0;
+            color: #666;
+        }
+        .special-recognition {
+            background: linear-gradient(135deg, #ffd700 0%, #ffa500 100%);
+            padding: 15px;
+            border-radius: 8px;
+            margin: 20px 0;
+            color: #333;
+        }
+        @media (max-width: 600px) {
+            .workout-day {
+                flex-direction: column;
+            }
+            .day-label {
+                width: 100%;
+                margin-bottom: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>HIGH SCHOOL CROSS COUNTRY</h1>
+        <div class="subtitle">Week #9 Newsletter (Oct 6 - Oct 12, 2025)</div>
+    </div>
+
+    <h2>🏆 SPECIAL RECOGNITION</h2>
+    <div class="special-recognition">
+        <h3 style="margin-top: 0;">Outstanding Performances at Mile High League Meet!</h3>
+        <p><strong>Congratulations to our League Champions and All-Conference Athletes!</strong></p>
+        <ul>
+            <li><strong>Rylan</strong> - 1st Place Mile High League Champion! Outstanding race and well-deserved victory!</li>
+            <li><strong>Maggie</strong> - Mile High League All-Conference First Team! Exceptional performance!</li>
+            <li><strong>Elena</strong> - Mile High League All-Conference Second Team! Great racing!</li>
+        </ul>
+        <p>Your hard work and dedication have paid off. The entire team is proud of your achievements!</p>
+    </div>
+
+    <h2>📅 WEEKLY WORKOUT SCHEDULE - FALL BREAK EDITION</h2>
+    <div class="announcements-box">
+        <p><strong>⚠️ IMPORTANT: No formal practice Friday 10/10 and all of next week due to Fall Break</strong></p>
+        <p>The workouts below are for you to complete on your own or with teammates. <strong>Running is more fun together - coordinate with your teammates to meet up!</strong> Following these workouts is crucial for Regionals on Thursday, October 23rd.</p>
+    </div>
+
+    <div class="workout-table">
+        <div class="workout-day">
+            <span class="day-label">Monday 10/6:</span>
+            <span class="workout-content">
+                <strong>Easy Recovery Day (E)</strong>
+                Varsity: 4-5 miles at conversational pace<br>
+                JV: 3 miles at conversational pace<br>
+                Focus: Recovery from League meet, prepare for Tuesday's tempo work
+            </span>
+        </div>
+        <div class="workout-day">
+            <span class="day-label">Tuesday 10/7:</span>
+            <span class="workout-content">
+                <strong>Threshold Workout (T)</strong>
+                2mi warm-up + dynamic stretches<br>
+                Main Set: Tempo Run at Threshold pace<br>
+                • Varsity: 3 miles at T pace (comfortably hard)<br>
+                • JV: 2 miles at T pace<br>
+                2mi cool-down + static stretching<br>
+                Purpose: Maintain lactate threshold fitness for Regionals
+            </span>
+        </div>
+        <div class="workout-day">
+            <span class="day-label">Wednesday 10/8:</span>
+            <span class="workout-content">
+                <strong>Easy Run + Strides (E)</strong>
+                Varsity: 5 miles easy pace<br>
+                JV: 3-4 miles easy pace<br>
+                All athletes: 6 x 100m strides<br>
+                Focus: Active recovery, maintain leg turnover
+            </span>
+        </div>
+        <div class="workout-day">
+            <span class="day-label">Thursday 10/9:</span>
+            <span class="workout-content">
+                <strong>Interval Workout (I)</strong>
+                2mi warm-up + dynamic stretches<br>
+                Main Set: 4 x 1000m at 5K race pace<br>
+                • 2 minutes rest between reps<br>
+                • Focus on consistent splits<br>
+                2mi cool-down + static stretching<br>
+                Purpose: Maintain VO₂max and race pace feel
+            </span>
+        </div>
+        <div class="workout-day">
+            <span class="day-label">Friday 10/10:</span>
+            <span class="workout-content">
+                <strong>Recovery Day</strong>
+                Option 1: 20-30 minutes easy running<br>
+                Option 2: Cross-training (bike, swim, elliptical)<br>
+                Fall Break begins - active recovery to prepare for Saturday's long run
+            </span>
+        </div>
+        <div class="workout-day">
+            <span class="day-label">Saturday 10/11:</span>
+            <span class="workout-content">
+                <strong>Long Run (LR)</strong>
+                Varsity: 7-8 miles at comfortable pace<br>
+                JV: 5-6 miles at comfortable pace<br>
+                Purpose: Build aerobic base and mental toughness<br>
+                Tip: Find a teammate to run with!
+            </span>
+        </div>
+        <div class="workout-day">
+            <span class="day-label">Sunday 10/12:</span>
+            <span class="workout-content">
+                <strong>OFF - Complete Rest</strong>
+                No running - recovery day<br>
+                Rest, hydrate, and prepare for next week's training<br>
+                Enjoy your Fall Break!
+            </span>
+        </div>
+    </div>
+
+    <div class="workout-key-box">
+        <h3>Workout Key:</h3>
+        <ul style="list-style-type: none; padding-left: 0;">
+            <li><strong>E</strong> = Easy pace (conversational)</li>
+            <li><strong>T</strong> = Threshold pace (comfortably hard, ~10K race pace)</li>
+            <li><strong>I</strong> = Interval pace (5K race pace)</li>
+            <li><strong>R</strong> = Repetition (mile race pace)</li>
+            <li><strong>LR</strong> = Long Run (steady, relaxed)</li>
+        </ul>
+    </div>
+
+    <h2>📢 IMPORTANT ANNOUNCEMENTS</h2>
+    <div class="announcements-box">
+        <ul>
+            <li><strong>Fall Break Training - October 10-17:</strong>
+                <ul style="margin-top: 5px;">
+                    <li>No formal practices during Fall Break</li>
+                    <li>Next week's workout schedule will be sent in a separate newsletter</li>
+                    <li>HIGHLY encouraged to coordinate with teammates for group runs</li>
+                    <li>Stay consistent - Regionals is Thursday, October 23rd!</li>
+                </ul>
+            </li>
+            <li><strong>Regional Championships Preview:</strong>
+                <ul style="margin-top: 5px;">
+                    <li>Date: Thursday, October 23, 2025</li>
+                    <li>More details coming in next week's newsletter</li>
+                    <li>This week and next week's training are critical for peak performance</li>
+                </ul>
+            </li>
+            <li><strong>Last Week's Results:</strong> Long's Peak Invitational (Mile High League) results available at <a href="https://co.milesplit.com/meets/688068-longs-peak-invitational-2025/results" target="_blank" style="color: #17a2b8;">MileSplit</a></li>
+            <li><strong>Communication During Fall Break:</strong> Check TeamSnap regularly for updates and workout meetup coordination</li>
+        </ul>
+    </div>
+
+    <h2>💬 A NOTE FROM YOUR COACHES</h2>
+    <div class="coach-note">
+        <p>Hawks, what an incredible performance at the Mile High League meet! Special congratulations to Rylan for winning the league championship - your hard work and dedication have truly paid off! Maggie and Elena, your All-Conference honors are well-deserved recognition of your consistent excellence throughout the season.</p>
+
+        <p>As we head into Fall Break, remember that championships are won during the "invisible" training days - the days when no one is watching, when you have to self-motivate. The workouts prescribed for this week and next follow the Jack Daniels methodology we've used all season:</p>
+
+        <p>• <strong>Tuesday's Threshold Run (T pace):</strong> This tempo effort at your lactate threshold pace (roughly 10K race pace) maintains your ability to clear lactate efficiently. With Regionals approaching, we're not trying to raise your threshold - we're maintaining it at peak levels.</p>
+
+        <p>• <strong>Thursday's Intervals (I pace):</strong> These 1000m repeats at 5K pace maintain your VO₂max - your body's maximum oxygen processing capacity. The 2-minute recoveries allow partial but not complete recovery, teaching your body to perform when not fully rested, just like the middle miles of a race.</p>
+
+        <p>• <strong>Saturday's Long Run:</strong> This aerobic effort continues building your mitochondrial density and capillary networks. Even during the championship phase, maintaining your aerobic base is crucial for race-day endurance.</p>
+
+        <p><strong>Running is more fun together!</strong> Please coordinate with your teammates to meet up for workouts. Not only will this help you push each other, but it maintains the team chemistry we've built all season. Use the TeamSnap app to organize meeting times and locations.</p>
+
+        <p>With Regionals on October 23rd, these next two weeks are crucial. Stay consistent with your training, get plenty of sleep, and maintain good nutrition even while on break. You've shown what you're capable of - now let's prepare to showcase it at the championship meets!</p>
+    </div>
+
+    <h2>🏃 TRAINING TIP OF THE WEEK</h2>
+    <div class="health-tip">
+        <h3 style="margin-top: 0;">Self-Directed Training During Fall Break</h3>
+        <p>Training on your own requires extra discipline and smart planning. Here's how to make the most of Fall Break training:</p>
+        <p><strong>Schedule It:</strong> Treat your runs like appointments. Set a specific time each day and stick to it. Morning runs often work best during break - get it done before the day gets away from you.</p>
+        <p><strong>Find a Partner:</strong> Text your teammates tonight to set up training times. Even meeting for 2-3 workouts makes a huge difference in motivation and performance.</p>
+        <p><strong>Location Variety:</strong> Use Fall Break to explore new running routes. This mental freshness can make solo runs more enjoyable. Just make sure to measure distances accurately.</p>
+        <p><strong>Pace Discipline:</strong> Without coaches watching, it's tempting to run too fast on easy days or too slow on workout days. Stick to the prescribed paces - they're designed for optimal Regionals preparation.</p>
+        <p><strong>Recovery Matters:</strong> With no structured practice schedule, don't forget recovery. Easy means EASY. Your body adapts during rest, not just during hard work.</p>
+    </div>
+
+    <div class="quote-box">
+        <div class="quote-text">"The difference between the impossible and the possible lies in a person's determination."</div>
+        <div class="quote-author">- Tommy Lasorda</div>
+        <p style="margin-top: 15px; font-size: 0.95em; font-style: normal;">Fall Break is where champions separate themselves from the pack. Your determination to train when no one is watching, to meet up with teammates when you could stay in bed, to push through workouts when there's no coach present - that's what will make the difference at Regionals. Stay hungry, Hawks!</p>
+    </div>
+
+    <div class="footer">
+        <p><strong>GO HAWKS!</strong></p>
+        <p style="font-size: 0.9em;">Questions? Contact your coaches via TeamSnap.<br>Remember to coordinate with teammates for Fall Break training!</p>
+    </div>
+
+</body>
+</html>
