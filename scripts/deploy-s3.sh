@@ -45,6 +45,12 @@ aws s3api head-bucket --bucket "$BUCKET_NAME" 2>/dev/null || {
 # Sync newsletters folder
 aws s3 sync newsletters/ "s3://$BUCKET_NAME/newsletters/" --delete
 
+# Sync styles folder
+aws s3 sync styles/ "s3://$BUCKET_NAME/styles/" --delete
+
+# Sync scripts folder (only client-side JS)
+aws s3 cp scripts/theme-toggle.js "s3://$BUCKET_NAME/scripts/theme-toggle.js"
+
 # Upload all HTML files in root directory
 for file in *.html; do
     if [ -f "$file" ]; then
