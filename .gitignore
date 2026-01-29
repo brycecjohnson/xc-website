@@ -33,3 +33,11 @@ npm-debug.log*
 # Temporary files
 *.tmp
 .temp/
+
+# Test artifacts
+playwright-report/
+test-results/
+
+# Python
+.venv/
+__pycache__/

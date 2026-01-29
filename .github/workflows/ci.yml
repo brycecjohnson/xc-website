@@ -1,0 +1,212 @@
+name: CI Quality Gates
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_call:
+
+jobs:
+  # Gate 1: Lint & Validate
+  validate:
+    name: Validate HTML & Structure
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check for required files
+        run: |
+          echo "Validating project structure..."
+          required_files=(
+            "index.html"
+            "styles/main.css"
+            "scripts/theme-toggle.js"
+            "newsletter-archive.html"
+            "training.html"
+            "results.html"
+          )
+          for file in "${required_files[@]}"; do
+            if [ ! -f "$file" ]; then
+              echo "::error::Missing required file: $file"
+              exit 1
+            fi
+          done
+          echo "All required files present"
+
+      - name: Validate HTML syntax
+        run: |
+          # Check for common HTML issues
+          for file in *.html; do
+            if ! grep -q '<!DOCTYPE html>' "$file"; then
+              echo "::warning file=$file::Missing DOCTYPE declaration"
+            fi
+            if ! grep -q '<html lang=' "$file"; then
+              echo "::warning file=$file::Missing lang attribute on html element"
+            fi
+          done
+          echo "HTML validation complete"
+
+  # Gate 2: E2E Tests
+  test:
+    name: E2E Tests
+    runs-on: ubuntu-latest
+    needs: validate
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Install Playwright browsers
+        run: npx playwright install chromium --with-deps
+
+      - name: Run E2E tests
+        run: npx playwright test --project=chromium
+        env:
+          CI: true
+
+      - name: Upload test report
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: playwright-report
+          path: playwright-report/
+          retention-days: 14
+
+      - name: Upload test results
+        uses: actions/upload-artifact@v4
+        if: failure()
+        with:
+          name: test-results
+          path: test-results/
+          retention-days: 7
+
+  # Gate 3: Accessibility Audit
+  accessibility:
+    name: Accessibility Audit
+    runs-on: ubuntu-latest
+    needs: validate
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Install Playwright browsers
+        run: npx playwright install chromium --with-deps
+
+      - name: Run accessibility tests
+        run: npx playwright test tests/e2e/accessibility.spec.ts --project=chromium
+        env:
+          CI: true
+
+      - name: Upload accessibility report
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: accessibility-report
+          path: playwright-report/
+          retention-days: 14
+
+  # Gate 4: Performance Budget
+  performance:
+    name: Performance Budget
+    runs-on: ubuntu-latest
+    needs: validate
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Install Playwright browsers
+        run: npx playwright install chromium --with-deps
+
+      - name: Run performance tests
+        run: npx playwright test tests/e2e/performance.spec.ts --project=chromium
+        env:
+          CI: true
+
+      - name: Check page weight budget
+        run: |
+          # Verify CSS isn't bloated
+          CSS_SIZE=$(wc -c < styles/main.css)
+          echo "CSS size: ${CSS_SIZE} bytes"
+          if [ "$CSS_SIZE" -gt 100000 ]; then
+            echo "::error::CSS exceeds 100KB budget"
+            exit 1
+          fi
+
+          # Check total HTML size
+          TOTAL_HTML=0
+          for f in *.html; do
+            SIZE=$(wc -c < "$f")
+            TOTAL_HTML=$((TOTAL_HTML + SIZE))
+          done
+          echo "Total HTML size: ${TOTAL_HTML} bytes"
+
+  # Gate 5: Link Validation
+  links:
+    name: Link Validation
+    runs-on: ubuntu-latest
+    needs: validate
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Install Playwright browsers
+        run: npx playwright install chromium --with-deps
+
+      - name: Run link validation tests
+        run: npx playwright test tests/e2e/links.spec.ts --project=chromium
+        env:
+          CI: true
+
+  # Gate 6: All gates must pass
+  quality-gate:
+    name: Quality Gate
+    runs-on: ubuntu-latest
+    needs: [test, accessibility, performance, links]
+    if: always()
+    steps:
+      - name: Check all gates
+        run: |
+          if [ "${{ needs.test.result }}" != "success" ] ||
+             [ "${{ needs.accessibility.result }}" != "success" ] ||
+             [ "${{ needs.performance.result }}" != "success" ] ||
+             [ "${{ needs.links.result }}" != "success" ]; then
+            echo "::error::One or more quality gates failed"
+            echo "  E2E Tests: ${{ needs.test.result }}"
+            echo "  Accessibility: ${{ needs.accessibility.result }}"
+            echo "  Performance: ${{ needs.performance.result }}"
+            echo "  Links: ${{ needs.links.result }}"
+            exit 1
+          fi
+          echo "All quality gates passed!"

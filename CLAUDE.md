@@ -12,44 +12,70 @@ This is the Skyview Academy Cross Country Team website - a static site hosted on
 - Team communication gateway (via TeamSnap integration)
 
 ### Technical Stack
-- **Frontend**: Pure HTML/CSS (no framework - intentionally simple for maintainability)
+- **Frontend**: HTML with shared CSS stylesheet (`styles/main.css`) using CSS custom properties as design tokens
+- **Testing**: Playwright + axe-core (118 E2E tests)
+- **CI/CD**: GitHub Actions 6-gate quality pipeline
 - **Hosting**: AWS S3 static website
 - **CDN/HTTPS**: AWS CloudFront
-- **Deployment**: Bash scripts with AWS CLI
+- **Monitoring**: AWS CloudWatch (dashboard + alarms)
+- **Deployment**: GitHub Pages (CI) + AWS S3 (production)
 - **Version Control**: Git/GitHub
 
 ## Key Commands
 
 ```bash
 # Local development
-python3 -m http.server 8000  # View at http://localhost:8000
+npm run serve                # View at http://localhost:8000
+
+# Testing
+npm test                     # Run all 118 Playwright tests
+npm run test:headed          # Run tests in visible browser
+npm run test:ui              # Interactive Playwright UI
+npm run test:e2e             # Run E2E tests only
 
 # Deploy to AWS
-npm run deploy-s3  # or: sh scripts/deploy-s3.sh
-
-# Git operations
-git add .
-git commit -m "Your message"
-git push
+npm run deploy-s3            # or: sh scripts/deploy-s3.sh
 ```
+
+## CSS Architecture
+
+All pages share `styles/main.css` which uses CSS custom properties as design tokens:
+- `--primary`: #667eea (purple-blue)
+- `--secondary`: #764ba2 (deep purple)
+- `--bg-*`, `--text-*`: Theme-aware colors supporting dark mode
+- `scripts/theme-toggle.js`: Dark mode toggle with localStorage persistence
+
+## CI/CD Pipeline
+
+`.github/workflows/ci.yml` runs a 6-gate pipeline on every push/PR:
+
+1. **Validate** — Check required files exist, validate HTML syntax
+2. **E2E Tests** — Full Playwright suite (118 tests)
+3. **Accessibility Audit** — axe-core WCAG 2.1 AA checks
+4. **Performance Budget** — CSS < 100KB, page load assertions
+5. **Link Validation** — Internal/external link checks
+6. **Quality Gate** — All gates must pass
+
+`.github/workflows/deploy.yml` deploys to GitHub Pages after CI passes.
 
 ## Project Structure
 
 ```
 skyview-xc-team/
-├── newsletters/           # Weekly newsletter HTML files
-│   └── week4-newsletter.html
-├── scripts/              # Deployment and build scripts
-│   ├── deploy-s3.sh     # AWS S3/CloudFront deployment
-│   └── build.sh         # Build preparation script
-├── index.html           # Main landing page
-├── training-level-guide.html  # JV vs Varsity selection guide
-├── daniels-method-guide.html  # Jack Daniels training explanation
-├── training.html        # Training pace calculator
-├── results.html         # Race results page
-├── package.json         # NPM scripts wrapper
-├── .env.example         # Environment variable template
-└── CLAUDE.md           # This file - AI assistant guide
+├── *.html                    # Site pages
+├── styles/main.css           # Shared stylesheet (design tokens)
+├── scripts/
+│   ├── deploy-s3.sh          # AWS S3/CloudFront deployment
+│   ├── setup-monitoring.sh   # CloudWatch dashboard provisioning
+│   └── theme-toggle.js       # Dark mode toggle
+├── newsletters/              # Weekly newsletter HTML files
+├── tests/e2e/                # Playwright test suites (118 tests)
+├── .github/workflows/
+│   ├── ci.yml                # 6-gate quality pipeline
+│   └── deploy.yml            # GitHub Pages deployment
+├── playwright.config.ts      # Test configuration
+├── package.json              # NPM scripts
+└── CLAUDE.md                 # This file
 
 ## Important URLs
 
@@ -97,7 +123,7 @@ skyview-xc-team/
 
 1. **HTML Structure**:
    - Use semantic HTML5 elements
-   - Include inline CSS for simplicity (no build process)
+   - Link to `styles/main.css` for shared styles; use CSS custom properties
    - Mobile-first responsive design
 
 2. **Comments**:
@@ -142,10 +168,8 @@ npm run deploy-s3
 
 ### Test Before Deploying
 ```bash
-# Start local server
-python3 -m http.server 8000
-# View at http://localhost:8000
-# Test all links and navigation
+npm test                     # Run all 118 E2E tests
+npm run serve                # Manual check at http://localhost:8000
 ```
 
 ## Training Content Guidelines
@@ -206,5 +230,5 @@ When working on this project:
 
 ---
 
-*Last Updated: August 2025*
+*Last Updated: January 2026*
 *For questions about the codebase, reference this guide first, then check README.md for deployment details.*

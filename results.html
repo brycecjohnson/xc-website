@@ -3,145 +3,152 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Race Results - Skyview Academy Cross Country</title>
+    <meta name="description" content="Race results for Skyview Academy Cross Country 2025 season">
+    <title>Results - Skyview XC</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="scripts/theme-toggle.js"></script>
     <style>
-        body {
-            font-family: 'Segoe UI', Arial, sans-serif;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            line-height: 1.6;
-            color: #333;
+        .result-card {
+            display: block;
+            padding: var(--space-5);
+            background: var(--color-bg);
+            border: 1px solid var(--color-border);
+            border-left: 4px solid var(--color-primary);
+            border-radius: var(--radius-lg);
+            margin-bottom: var(--space-4);
+            text-decoration: none;
+            transition: all var(--transition-base);
         }
-        .header {
-            text-align: center;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 40px;
-            border-radius: 10px;
-            margin-bottom: 30px;
+        .result-card:hover {
+            text-decoration: none;
+            border-left-color: var(--color-accent);
+            box-shadow: var(--shadow-md);
+            transform: translateX(4px);
         }
-        h1 {
+        .result-card h3 {
+            color: var(--color-text);
+            margin: 0 0 var(--space-2) 0;
+            font-size: var(--text-lg);
+        }
+        .result-card p {
+            color: var(--color-text-secondary);
             margin: 0;
-            font-size: 2.2em;
+            font-size: var(--text-sm);
         }
-        .subtitle {
-            margin-top: 10px;
-            font-size: 1.2em;
-            opacity: 0.95;
-        }
-        .content-section {
-            background-color: #f8f9fa;
-            border-radius: 8px;
-            padding: 25px;
-            margin: 20px 0;
-        }
-        h2 {
-            color: #667eea;
-            border-bottom: 2px solid #667eea;
-            padding-bottom: 5px;
-        }
-        .race-result {
-            background: white;
-            padding: 20px;
-            margin: 15px 0;
-            border-radius: 8px;
-            border-left: 4px solid #667eea;
-        }
-        .race-result h3 {
-            color: #667eea;
-            margin-top: 0;
-        }
-        .race-result a {
-            color: #667eea;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        .race-result a:hover {
-            text-decoration: underline;
-        }
-        .back-link {
+        .result-card .view-link {
+            color: var(--color-primary);
+            font-weight: 500;
+            margin-top: var(--space-3);
             display: inline-block;
-            margin-bottom: 20px;
-            color: #667eea;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        .back-link:hover {
-            text-decoration: underline;
-        }
-        .footer {
-            text-align: center;
-            margin-top: 40px;
-            padding-top: 20px;
-            border-top: 2px solid #e0e0e0;
-            color: #666;
         }
     </style>
 </head>
 <body>
-    <a href="index.html" class="back-link">← Back to Team Hub</a>
-    
-    <div class="header">
-        <h1>RACE RESULTS</h1>
-        <div class="subtitle">Skyview Academy Cross Country</div>
-    </div>
+    <header class="site-header">
+        <nav class="nav-container">
+            <a href="/" class="nav-logo">Skyview XC</a>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="newsletter-archive.html">Newsletters</a></li>
+                <li><a href="training.html">Training</a></li>
+                <li><a href="results.html" class="active">Results</a></li>
+                <li><a href="season-plan.html">Season Plan</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="theme-toggle" aria-label="Toggle dark mode">
+                    <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+                <button class="mobile-menu-toggle" aria-label="Toggle menu" onclick="document.getElementById('nav-links').classList.toggle('active')">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+        </nav>
+    </header>
 
-    <div class="content-section">
-        <h2>🏃 Recent Race Results</h2>
-
-        <div class="race-result">
-            <h3>Long's Peak Invitational (Mile High League) - October 3, 2025</h3>
-            <p>Lake Estes Golf Course, Estes Park</p>
-            <a href="https://co.milesplit.com/meets/688068-longs-peak-invitational-2025/results" target="_blank">View Full Results →</a>
+    <main class="site-container">
+        <div class="page-header">
+            <h1>Race Results</h1>
+            <p class="subtitle">2025 Season</p>
         </div>
 
-        <div class="race-result">
-            <h3>Dave Sanders Invitational - September 27, 2025</h3>
-            <p>Dave Sanders High School</p>
-            <a href="https://runsignup.com/Race/Results/192896#resultSetId-588815;perpage:100" target="_blank">View Full Results →</a>
-        </div>
+        <section>
+            <h2>Recent Meets</h2>
 
-        <div class="race-result">
-            <h3>Arvada West Durden Invitational - September 20, 2025</h3>
-            <p>Arvada West High School</p>
-            <a href="https://co.milesplit.com/meets/695803-arvada-west-durden-invitational-2025/results" target="_blank">View Full Results →</a>
-        </div>
+            <a href="https://co.milesplit.com/meets/688068-longs-peak-invitational-2025/results" target="_blank" rel="noopener noreferrer" class="result-card">
+                <h3>Long's Peak Invitational (Mile High League)</h3>
+                <p>October 3, 2025 · Lake Estes Golf Course, Estes Park</p>
+                <span class="view-link">View Full Results →</span>
+            </a>
 
-        <div class="race-result">
-            <h3>Jeffco League Meet #2 - September 19, 2025</h3>
-            <p>Clement Park, Littleton</p>
-            <a href="https://racingunderground.racetecresults.com/results.aspx?CId=16436&RId=677" target="_blank">View Full Results →</a>
-        </div>
+            <a href="https://runsignup.com/Race/Results/192896#resultSetId-588815;perpage:100" target="_blank" rel="noopener noreferrer" class="result-card">
+                <h3>Dave Sanders Invitational</h3>
+                <p>September 27, 2025 · Clement Park</p>
+                <span class="view-link">View Full Results →</span>
+            </a>
 
-        <div class="race-result">
-            <h3>Road Runner 5K - September 14, 2025</h3>
-            <p>Washington Park, Denver</p>
-            <a href="https://milesplit.live/meets/697361" target="_blank">View Full Results →</a>
-        </div>
+            <a href="https://co.milesplit.com/meets/695803-arvada-west-durden-invitational-2025/results" target="_blank" rel="noopener noreferrer" class="result-card">
+                <h3>Arvada West Durden Invitational</h3>
+                <p>September 20, 2025 · Arvada West High School</p>
+                <span class="view-link">View Full Results →</span>
+            </a>
 
-        <div class="race-result">
-            <h3>Liberty Bell 5K - September 13, 2025</h3>
-            <p>Heritage High School, Littleton</p>
-            <a href="https://cetiming.anet.live/meets/54862" target="_blank">View Full Results →</a>
-        </div>
+            <a href="https://racingunderground.racetecresults.com/results.aspx?CId=16436&RId=677" target="_blank" rel="noopener noreferrer" class="result-card">
+                <h3>Jeffco League Meet #2</h3>
+                <p>September 19, 2025 · Clement Park, Littleton</p>
+                <span class="view-link">View Full Results →</span>
+            </a>
 
-        <div class="race-result">
-            <h3>D'Evelyn Dash XC - August 29, 2025</h3>
-            <p>D'Evelyn High School</p>
-            <a href="https://runsignup.com/Race/Results/190148#resultSetId-577757;perpage:100" target="_blank">View Full Results →</a>
-        </div>
+            <a href="https://milesplit.live/meets/697361" target="_blank" rel="noopener noreferrer" class="result-card">
+                <h3>Road Runner 5K</h3>
+                <p>September 14, 2025 · Washington Park, Denver</p>
+                <span class="view-link">View Full Results →</span>
+            </a>
 
-        <div class="race-result">
-            <h3>Season Results Archive</h3>
-            <p>All 2025 race results are listed above in chronological order.</p>
-            <p style="color: #666; font-style: italic;">Check back after each meet for updated results!</p>
-        </div>
-    </div>
+            <a href="https://cetiming.anet.live/meets/54862" target="_blank" rel="noopener noreferrer" class="result-card">
+                <h3>Liberty Bell 5K</h3>
+                <p>September 13, 2025 · Heritage High School, Littleton</p>
+                <span class="view-link">View Full Results →</span>
+            </a>
 
-    <div class="footer">
-        <p><strong>GO HAWKS!</strong></p>
-        <p style="font-size: 0.9em;">Questions? Contact your coaches via Team Snap</p>
-    </div>
+            <a href="https://runsignup.com/Race/Results/190148#resultSetId-577757;perpage:100" target="_blank" rel="noopener noreferrer" class="result-card">
+                <h3>D'Evelyn Dash XC</h3>
+                <p>August 29, 2025 · D'Evelyn High School</p>
+                <span class="view-link">View Full Results →</span>
+            </a>
+        </section>
+
+        <div class="info-box info-box--info">
+            <p><strong>Note:</strong> All 2025 race results are listed above in chronological order. Check back after each meet for updated results!</p>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <p class="footer-brand">Skyview Academy Cross Country</p>
+            <p class="footer-attribution">
+                Built by <a href="https://www.linkedin.com/in/bryce-johnson-436856140/" target="_blank" rel="noopener noreferrer">Bryce Johnson</a>
+                · <a href="https://github.com/brycecjohnson/xc-website" target="_blank" rel="noopener noreferrer">View Source</a>
+            </p>
+        </div>
+    </footer>
 </body>
 </html>
