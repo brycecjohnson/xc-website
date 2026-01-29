@@ -1,167 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- 
-    Skyview Academy Cross Country Team Hub
-    Main landing page for team resources and weekly newsletters
-    Hosted on AWS S3 + CloudFront
-    -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Skyview Academy Cross Country Team</title>
-    <style>
-        /* Main styles - Purple theme (#667eea primary, #764ba2 secondary) */
-        body {
-            font-family: 'Segoe UI', Arial, sans-serif;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            line-height: 1.6;
-            color: #333;
-        }
-        .header {
-            text-align: center;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 40px;
-            border-radius: 10px;
-            margin-bottom: 30px;
-        }
-        h1 {
-            margin: 0;
-            font-size: 2.5em;
-        }
-        .subtitle {
-            margin-top: 10px;
-            font-size: 1.2em;
-            opacity: 0.95;
-        }
-        .content-section {
-            background-color: #f8f9fa;
-            border-radius: 8px;
-            padding: 25px;
-            margin: 20px 0;
-        }
-        h2 {
-            color: #667eea;
-            border-bottom: 2px solid #667eea;
-            padding-bottom: 5px;
-        }
-        .newsletter-list {
-            list-style: none;
-            padding: 0;
-        }
-        .newsletter-item {
-            background: white;
-            padding: 15px;
-            margin: 10px 0;
-            border-radius: 8px;
-            border-left: 4px solid #667eea;
-            transition: transform 0.2s;
-        }
-        .newsletter-item:hover {
-            transform: translateX(5px);
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-        .newsletter-item a {
-            color: #667eea;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 1.1em;
-        }
-        .newsletter-item a:hover {
-            text-decoration: underline;
-        }
-        .quick-links {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-            margin: 20px 0;
-        }
-        .link-card {
-            background: white;
-            padding: 20px;
-            border-radius: 8px;
-            text-align: center;
-            border: 2px solid #e0e0e0;
-            transition: border-color 0.3s;
-        }
-        .link-card:hover {
-            border-color: #667eea;
-        }
-        .link-card h3 {
-            color: #667eea;
-            margin-top: 0;
-        }
-        .footer {
-            text-align: center;
-            margin-top: 40px;
-            padding-top: 20px;
-            border-top: 2px solid #e0e0e0;
-            color: #666;
-        }
-    </style>
+    <meta name="description" content="Skyview Academy Cross Country Team - Weekly newsletters, training guides, and team resources">
+    <title>Skyview Academy Cross Country</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="scripts/theme-toggle.js"></script>
 </head>
 <body>
-    <!-- Header Section - Team Branding -->
-    <div class="header">
-        <h1>SKYVIEW ACADEMY</h1>
-        <div class="subtitle">Cross Country Team Hub</div>
-    </div>
+    <header class="site-header">
+        <nav class="nav-container">
+            <a href="/" class="nav-logo">
+                <span>Skyview XC</span>
+            </a>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="newsletter-archive.html">Newsletters</a></li>
+                <li><a href="training.html">Training</a></li>
+                <li><a href="results.html">Results</a></li>
+                <li><a href="season-plan.html">Season Plan</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="theme-toggle" aria-label="Toggle dark mode">
+                    <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+                <button class="mobile-menu-toggle" aria-label="Toggle menu" onclick="document.getElementById('nav-links').classList.toggle('active')">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+        </nav>
+    </header>
 
-    <!-- Weekly Newsletters Section - Add new newsletters here -->
-    <div class="content-section">
-        <h2>📰 Weekly Newsletters</h2>
-        <ul class="newsletter-list">
-            <li class="newsletter-item">
-                <a href="newsletters/week12-newsletter.html" style="text-decoration: none; color: inherit; display: block;">
-                    <span style="color: #667eea; text-decoration: none; font-weight: bold; font-size: 1.1em;">Week 12 Newsletter</span>
-                    <p style="margin: 5px 0 0 0; color: #666;">October 27, 2025 - Current Week</p>
-                </a>
-            </li>
-            <li class="newsletter-item">
-                <a href="newsletter-archive.html" style="text-decoration: none; color: inherit; display: block;">
-                    <span style="color: #764ba2; text-decoration: none; font-weight: bold; font-size: 1.1em;">📚 Newsletter Archive</span>
-                    <p style="margin: 5px 0 0 0; color: #666;">View all past newsletters from the season</p>
-                </a>
-            </li>
-        </ul>
-    </div>
-
-    <!-- Quick Links Section - Team resources and tools -->
-    <div class="content-section">
-        <h2>🔗 Quick Links</h2>
-        <div class="quick-links">
-            <div class="link-card">
-                <a href="training-level-guide.html" style="text-decoration: none; color: inherit; display: block;">
-                    <h3>🎯 Training Levels</h3>
-                    <p>JV vs Varsity workout selection guide</p>
-                </a>
-            </div>
-            <div class="link-card">
-                <a href="results.html" style="text-decoration: none; color: inherit; display: block;">
-                    <h3>📊 Results</h3>
-                    <p>Meet results and PR tracking</p>
-                </a>
-            </div>
-            <div class="link-card">
-                <a href="daniels-method-guide.html" style="text-decoration: none; color: inherit; display: block;">
-                    <h3>🧠 Training Method</h3>
-                    <p>Understanding Jack Daniels system</p>
-                </a>
-            </div>
-            <div class="link-card">
-                <a href="https://go.teamsnap.com/login/signin" target="_blank" style="text-decoration: none; color: inherit; display: block;">
-                    <h3>📱 TeamSnap Login</h3>
-                    <p>Team calendar and communication</p>
-                </a>
-            </div>
+    <main class="site-container">
+        <div class="page-header">
+            <h1>Skyview Academy</h1>
+            <p class="subtitle">Cross Country Team Hub</p>
         </div>
-    </div>
 
-    <div class="footer">
-        <p><strong>GO HAWKS!</strong></p>
-        <p style="font-size: 0.9em;">Questions? Contact your coaches via Team Snap</p>
-    </div>
+        <section>
+            <h2>Latest Newsletter</h2>
+            <a href="newsletters/week12-newsletter.html" class="newsletter-card">
+                <div class="newsletter-card-header">
+                    <span class="newsletter-card-title">Week 12 Newsletter</span>
+                    <span class="badge badge--primary">Current</span>
+                </div>
+                <p class="newsletter-card-date">October 27 - November 2, 2025</p>
+            </a>
+            <p class="text-muted text-small mt-4">
+                <a href="newsletter-archive.html">View all newsletters</a>
+            </p>
+        </section>
+
+        <section>
+            <h2>Quick Links</h2>
+            <div class="card-grid">
+                <a href="training-level-guide.html" class="feature-card">
+                    <span class="feature-card-icon">🎯</span>
+                    <span class="feature-card-title">Training Levels</span>
+                    <span class="feature-card-description">JV vs Varsity workout selection guide</span>
+                </a>
+                <a href="results.html" class="feature-card">
+                    <span class="feature-card-icon">📊</span>
+                    <span class="feature-card-title">Results</span>
+                    <span class="feature-card-description">Meet results and PR tracking</span>
+                </a>
+                <a href="daniels-method-guide.html" class="feature-card">
+                    <span class="feature-card-icon">🧠</span>
+                    <span class="feature-card-title">Training Method</span>
+                    <span class="feature-card-description">Understanding Jack Daniels system</span>
+                </a>
+                <a href="https://go.teamsnap.com/login/signin" target="_blank" rel="noopener noreferrer" class="feature-card">
+                    <span class="feature-card-icon">📱</span>
+                    <span class="feature-card-title">TeamSnap</span>
+                    <span class="feature-card-description">Team calendar and communication</span>
+                </a>
+            </div>
+        </section>
+
+        <section>
+            <div class="quote-box">
+                <p class="quote-text">"Success is peace of mind which is a direct result of self-satisfaction in knowing you did your best to become the best you are capable of becoming."</p>
+                <p class="quote-author">— John Wooden</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <p class="footer-brand">Skyview Academy Cross Country</p>
+            <p class="footer-attribution">
+                Built by <a href="https://www.linkedin.com/in/bryce-johnson-436856140/" target="_blank" rel="noopener noreferrer">Bryce Johnson</a>
+                · <a href="https://github.com/brycecjohnson/xc-website" target="_blank" rel="noopener noreferrer">View Source</a>
+            </p>
+        </div>
+    </footer>
 </body>
 </html>

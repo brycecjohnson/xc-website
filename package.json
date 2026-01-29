@@ -1,13 +1,27 @@
 {
   "name": "skyview-xc-team",
-  "version": "1.0.0",
-  "description": "Skyview Academy Cross Country Team Website",
+  "version": "2.0.0",
+  "description": "Skyview Academy Cross Country Team Website - Portfolio Showcase",
+  "author": "Bryce Johnson",
+  "license": "MIT",
   "scripts": {
-    "deploy-s3": "sh scripts/deploy-s3.sh",
     "serve": "python3 -m http.server 8000",
-    "build": "sh scripts/build.sh"
+    "deploy-s3": "sh scripts/deploy-s3.sh",
+    "build": "sh scripts/build.sh",
+    "test": "playwright test",
+    "test:e2e": "playwright test tests/e2e/",
+    "test:headed": "playwright test --headed",
+    "test:ui": "playwright test --ui",
+    "test:report": "playwright show-report"
   },
-  "keywords": ["cross-country", "skyview", "newsletter"],
-  "author": "",
-  "license": "MIT"
+  "keywords": [
+    "cross-country",
+    "skyview",
+    "newsletter",
+    "portfolio"
+  ],
+  "devDependencies": {
+    "@playwright/test": "^1.40.0",
+    "@axe-core/playwright": "^4.8.0"
+  }
 }
